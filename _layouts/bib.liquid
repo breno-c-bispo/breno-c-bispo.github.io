@@ -1,6 +1,14 @@
 ---
 ---
-<div class="row">
+{% assign entry_pubtype = entry.pubtype | default: '' %}
+{% assign entry_note_lower = entry.note | downcase | default: '' %}
+<div
+  class="row bib-entry"
+  data-year="{{ entry.year }}"
+  data-entrytype="{{ entry.type }}"
+  data-pubtype="{{ entry_pubtype }}"
+  data-note="{{ entry_note_lower }}"
+>
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}

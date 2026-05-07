@@ -15,9 +15,8 @@
   pages       = {111409},
   year        = {2026},
   doi         = {10.1016/j.compbiomed.2025.111409},
-  html        = {https://doi.org/10.1016/j.compbiomed.2025.111409},
   selected    = {true},
-  abstract    = {We propose a hypergraph signal processing framework for brain community detection, going beyond pairwise interactions to capture higher-order functional connectivity from neuroimaging data.}
+  abstract    = {Network theory is a well-established approach for characterizing brain functional networks in neuroscience. However, the brain’s higher-order structures, which arise from complex, non-pairwise interactions among regions, often elude traditional graph-based approaches. While recent studies have introduced hypergraph-based methods to capture these complexities, many still depend on pairwise approximations or simplified geometric constructs such as incidence matrices, which may fail to represent authentic higher-order relationships. To address this limitation, we present a novel community detection framework for analyzing higher-order functional connectivity using real-world resting-state fMRI data. Our approach integrates multivariate information-theoretic measures with tools from hypergraph signal processing (an emerging mathematical framework tailored to model the dynamics of complex systems through higher-order interactions) enabling the identification of neurobiologically interpretable structures in the brain. Through a comparative analysis of (hyper-)graph clustering models, we uncover brain communities that remain (mostly) elusive to conventional graph-based approaches. Intriguingly, certain hypergraph modes reveal cross-network integrative patterns across distinct functional subsystems, in line with the redundancy–synergy balance that characterizes large-scale brain organization. These findings provide new insights into the architecture of higher-order functional connectivity and open promising avenues for clinical applications, particularly in studying brain disorders marked by disrupted complex connectivity patterns.}
 }
 
 @article{lima2026permutation,
@@ -30,8 +29,7 @@
   pages       = {111682},
   year        = {2026},
   doi         = {10.1016/j.compbiomed.2026.111682},
-  html        = {https://doi.org/10.1016/j.compbiomed.2026.111682},
-  abstract    = {Novel graph permutation entropy measures for pairwise time series interdependence, applied to brain functional connectivity analysis.}
+  abstract    = {Permutation entropy (PE) has been widely used to assess the complexity of time series and, in this context, has been applied to the analysis of various types of signals. In this paper, we advance the theory related to PE by defining joint entropy, mutual information, and quadratic dependence measures based on so-called graph permutation entropies. Similarly to their original counterparts commonly employed in information theory, the proposed measures aim to quantify the interdependence between time series. This is validated by applying the measures to the modeling of brain functional connectivity, using electromagnetic resonance imaging data selected from the Human Connectome Project. Our results are supported by performance scores that evaluate the precision of clustering operations through which known brain subsystems are detected in healthy subjects. In this context, we conclude that the introduced measures may achieve better performance than those obtained using previously proposed measures.}
 }
 
 @article{bispo2023hardware,
@@ -43,8 +41,7 @@
   volume      = {42},
   year        = {2023},
   doi         = {10.1007/s00034-023-02493-1},
-  html        = {https://doi.org/10.1007/s00034-023-02493-1},
-  abstract    = {We present efficient FPGA hardware architectures for computing eigendecomposition-based discrete fractional Fourier transforms, achieving reduced arithmetic complexity.}
+  abstract    = {The fractional Fourier transform (FrFT) is a useful mathematical tool for signal and image processing. In some applications, the eigendecomposition-based discrete FrFT (DFrFT) is suitable due to its properties of orthogonality, additivity, reversibility and approximation of continuous FrFT. Although recent studies have introduced reduced arithmetic complexity algorithms for DFrFT computation, which are attractive for real-time and low-power consumption practical scenarios, reliable hardware architectures in this context are gaps in the literature. In this paper, we present two hardware architectures based on the referred algorithms to obtain N-point DFrFT (N = 4L, is a positive integer). We validate and compare the performance of such architectures by employing field-programmable gate array implementations, co-designed with an embedded hard processor unit. In particular, we carry out computer experiments where synthesis, error and latency analyses are performed, and consider an application related to compact signal representation.}
 }
 
 % ============================================================
@@ -52,49 +49,43 @@
 % ============================================================
 
 @article{sardellitti2025cell,
-  abbr        = {IEEE TSP},
+  abbr        = {Under review},
   bibtex_show = {true},
   title       = {Topological Signal Processing Over Cell MultiComplexes Via Cross-Laplacian Operators},
   author      = {Sardellitti, Stefania and Bispo, Breno C. and Santos, Fernando A. N. and Lima, Juliano B.},
-  journal     = {IEEE Transactions on Signal Processing},
   year        = {2025},
-  note        = {Submitted. Shared first authorship.},
   arxiv       = {2510.09139},
+  url         = {https://arxiv.org/abs/2510.09139},
   selected    = {true},
-  abstract    = {We introduce cross-Laplacian operators for topological signal processing over cell multicomplexes, enabling the analysis of signals supported on structured topological spaces beyond simplicial complexes.}
+  abstract    = {One of the key challenges in many research fields is uncovering how different interconnected systems interact within complex networks, typically represented as multi-layer networks. Capturing the intra- and cross-layer interactions among different domains for analysis and processing calls for topological algebraic descriptors capable of localizing the homologies of different domains, at different scales, according to the learning task. Our first contribution in this paper is to introduce the Cell MultiComplexes (CMCs), which are novel topological spaces that enable the representation of higher-order interactions among interconnected cell complexes. We introduce cross-Laplacian operators as powerful algebraic descriptors of CMC spaces able to capture different topological invariants, whether global or local, at different resolutions. Using the eigenvectors of these operators as bases for the signal representation, we develop topological signal processing tools for signals defined over CMCs. Then, we focus on the signal spectral representation and on the filtering of noisy flows observed over the cross-edges between different layers of CMCs. We show that a local signal representation based on cross-Laplacians yields a better sparsity/accuracy trade-off compared to monocomplex representations, which provide overcomplete representation of local signals. Finally, we illustrate a topology learning strategy designed to infer second-order cross-cells between layers, with applications to brain networks for encoding inter-module connectivity patterns.}
 }
 
 @article{bispo2026multimodal,
-  abbr        = {IEEE JBHI},
+  abbr        = {Under review},
   bibtex_show = {true},
   title       = {Multimodal Higher-Order Brain Networks: A Topological Signal Processing Perspective},
   author      = {Bispo, Breno C. and Sardellitti, Stefania and Santos, Fernando A. N. and Lima, Juliano B.},
-  journal     = {IEEE Journal of Biomedical and Health Informatics},
   year        = {2026},
-  note        = {Submitted. Corresponding author.},
   arxiv       = {2603.29903},
+  url         = {https://arxiv.org/abs/2603.29903},
   selected    = {true},
   abstract    = {We propose a multimodal topological signal processing framework for higher-order brain network analysis, integrating structural and functional connectivity to reveal complex brain dynamics.}
 }
 
 @article{lima2026schizophrenia,
-  abbr        = {BSPC},
-  bibtex_show = {true},
+  abbr        = {Under review},
+  bibtex_show = {false},
   title       = {Schizophrenia Detection from Electroencephalogram Signals Using Graph Permutation Entropies},
   author      = {Lima, Juliano B. and Silva Neto, E. F. and Bispo, Breno C. and Morgado, P.},
-  journal     = {Biomedical Signal Processing and Control},
   year        = {2026},
-  note        = {Submitted.}
 }
 
 @article{silvaneto2026tensor,
-  abbr        = {IEEE TIP},
-  bibtex_show = {true},
+  abbr        = {Under review},
+  bibtex_show = {false},
   title       = {Tensor-Based Hypergraph Learning for Schizophrenia and ADHD Classification},
   author      = {Silva Neto, E. F. and Bispo, Breno C. and Lima, Juliano B.},
-  journal     = {IEEE Transactions on Image Processing},
   year        = {2026},
-  note        = {Submitted.}
 }
 
 % ============================================================
@@ -110,9 +101,9 @@
   pages       = {2647--2651},
   year        = {2025},
   address     = {Palermo, Italy},
+  arxiv       = {2504.07671v1},
   doi         = {10.23919/EUSIPCO63237.2025.11226604},
-  html        = {https://doi.org/10.23919/EUSIPCO63237.2025.11226604},
-  abstract    = {We develop topological signal processing over cell multicomplexes using cross-Laplacian operators, enabling signal analysis on heterogeneous topological spaces.}
+  abstract    = {The study of the interactions among different types of interconnected systems in complex networks has attracted significant interest across many research fields. However, effective signal processing over layered networks requires topological descriptors of the intra- and cross-layers relationships that are able to disentangle the homologies of different domains, at different scales, according to the specific learning task. In this paper, we present Cell MultiComplex (CMC) spaces, which are novel topological domains for representing multiple higher-order relationships among interconnected complexes. We introduce cross-Laplacians matrices, which are algebraic descriptors of CMCs enabling the extraction of topological invariants at different scales, whether global or local, inter-layer or intra-layer. Using the eigenvectors of these cross-Laplacians as signal bases, we develop topological signal processing tools for CMC spaces. In this first study, we focus on the representation and filtering of noisy flows observed over cross-edges between different layers of CMCs to identify cross-layer hubs, i.e., key nodes on one layer controlling the others.}
 }
 
 @inproceedings{bispo2025eusipco,
@@ -125,9 +116,9 @@
   year        = {2025},
   address     = {Palermo, Italy},
   doi         = {10.23919/EUSIPCO63237.2025.11226759},
-  html        = {https://doi.org/10.23919/EUSIPCO63237.2025.11226759},
+  pdf        = {bispo2025eusipco.pdf},
   selected    = {true},
-  abstract    = {We apply topological signal processing to learn higher-order interactions in brain networks, revealing complex functional connectivity patterns beyond pairwise relations.}
+  abstract    = {Our goal in this paper is to leverage the potential of the topological signal processing (TSP) framework for analyzing brain networks. Representing brain data as signals over simplicial complexes allows us to capture higher-order relationships within brain regions of interest (ROIs). Here, we focus on learning the underlying brain topology from observed neural signals using two distinct inference strategies. The first method relies on higher-order statistical metrics to infer multiway relationships among ROIs. The second method jointly learns the brain topology and sparse signal representations, of both the solenoidal and harmonic components of the signals, by minimizing the total variation along triangles and the data-fitting errors. Leveraging the properties of solenoidal and irrotational signals, and their physical interpretations, we extract functional connectivity features from brain topologies and uncover new insights into functional organization patterns. This allows us to associate brain functional connectivity patterns of conservative signals with well-known functional segregation and integration properties. Our findings align with recent neuroscience research, suggesting that our approach may offer a promising pathway for characterizing the higher-order brain functional connectivity.}
 }
 
 @inproceedings{bispo2024eusipco,
@@ -140,9 +131,8 @@
   year        = {2024},
   address     = {Lyon, France},
   doi         = {10.23919/EUSIPCO63174.2024.10715376},
-  html        = {https://doi.org/10.23919/EUSIPCO63174.2024.10715376},
   selected    = {true},
-  abstract    = {We demonstrate the emergence of higher-order functional brain connectivity patterns using hypergraph signal processing, going beyond pairwise functional connectivity measures.}
+  abstract    = {Network theory has provided remarkable insights on how the human brain works. Such insights usually originate from models based on dyadic connections between brain regions, which may be inadequate for characterizing higher-order interactions. In recent works, this issue has been addressed by using hypergraph-based models, from which the aforementioned interactions can be revealed. In this line, this paper proposes to construct (brain) hypergraphs using a multivariate information-theoretic interdependence metric called interaction information. Our methodology is applied to functional magnetic resonance imaging (fMRI) time series and employs hypergraph signal processing concepts to analyze the eigenmodes of the brain hypergraph spectrum space. This allows to associate some spectral components of hypergraph modes with well-known functional brain subsystems as well as observe that specific low-frequency eigenmodes exhibit similarity patterns of neural activity. These results are in line with recent findings regarding the redundant and synergistic properties of the brain, and indicate that our study may represent a promising pathway to characterize the dynamics of higher-order brain functional connectivity.}
 }
 
 @inproceedings{bispo2024access,
@@ -157,7 +147,6 @@
   pages       = {657--667},
   year        = {2024},
   doi         = {10.1007/978-3-031-49407-9_65},
-  html        = {https://doi.org/10.1007/978-3-031-49407-9_65}
 }
 
 @inproceedings{bispo2024nfc,
@@ -172,11 +161,10 @@
   pages       = {465--475},
   year        = {2024},
   doi         = {10.1007/978-3-031-49407-9_47},
-  html        = {https://doi.org/10.1007/978-3-031-49407-9_47}
 }
 
 @inproceedings{bispo2022wearable,
-  abbr        = {CBEB},
+  abbr        = {IFMBE},
   bibtex_show = {true},
   title       = {Wearable System for Postural Adaptation},
   author      = {Bispo, Breno C. and Cunha, N. A. and Cavalcante, E. L. and Esteves, G. R. P. and Ferreira, K. R. C. and Chaves Filho, A. C. and Rodrigues, M. A. B.},
@@ -187,11 +175,10 @@
   pages       = {387--393},
   year        = {2022},
   doi         = {10.1007/978-3-030-70601-2_60},
-  html        = {https://doi.org/10.1007/978-3-030-70601-2_60}
 }
 
 @inproceedings{bispo2022hospital,
-  abbr        = {CBEB},
+  abbr        = {IFMBE},
   bibtex_show = {true},
   title       = {Access Control in Hospitals with RFID and BLE Technologies},
   author      = {Bispo, Breno C. and Cavalcante, E. L. and Esteves, G. R. P. and Silva, M. C. B. C. and Alves, G. J. and Rodrigues, M. A. B.},
@@ -202,11 +189,10 @@
   pages       = {917--924},
   year        = {2022},
   doi         = {10.1007/978-3-030-70601-2_137},
-  html        = {https://doi.org/10.1007/978-3-030-70601-2_137}
 }
 
 @inproceedings{silva2022serious1,
-  abbr        = {CBEB},
+  abbr        = {IFMBE},
   bibtex_show = {true},
   title       = {A Serious Game that Can Aid Physiotherapy Treatment in Children Using Dennis Brown Orthotics},
   author      = {Silva, A. T. D. and Bispo, Breno C. and Esteves, G. R. P. and Silva, M. C. B. C. and Rodrigues, M. A. B.},
@@ -217,11 +203,10 @@
   pages       = {445--450},
   year        = {2022},
   doi         = {10.1007/978-3-030-70601-2_69},
-  html        = {https://doi.org/10.1007/978-3-030-70601-2_69}
 }
 
 @inproceedings{silva2022serious2,
-  abbr        = {CBEB},
+  abbr        = {IFMBE},
   bibtex_show = {true},
   title       = {Adapted Children's Serious Game Using Dennis Brown Orthotics During the Preparatory Phase for the Gait},
   author      = {Silva, A. T. D. and Bispo, Breno C. and Conceição, A. M. and Silva, M. C. B. C. and Esteves, G. R. P. and Rodrigues, M. A. B.},
@@ -232,11 +217,10 @@
   pages       = {439--443},
   year        = {2022},
   doi         = {10.1007/978-3-030-70601-2_68},
-  html        = {https://doi.org/10.1007/978-3-030-70601-2_68}
 }
 
 @inproceedings{cunha2022mqtt,
-  abbr        = {CBEB},
+  abbr        = {IFMBE},
   bibtex_show = {true},
   title       = {Application of MQTT Network for Communication in Healthcare Establishment},
   author      = {Cunha, N. A. and Bispo, Breno C. and Cavalcante, E. L. and Inocencio, A. V. M. and Alves, G. J. and Rodrigues, M. A. B.},
@@ -247,11 +231,10 @@
   pages       = {1465--1470},
   year        = {2022},
   doi         = {10.1007/978-3-030-70601-2_216},
-  html        = {https://doi.org/10.1007/978-3-030-70601-2_216}
 }
 
 @inproceedings{silva2022navigation,
-  abbr        = {CBEB},
+  abbr        = {IFMBE},
   bibtex_show = {true},
   title       = {Assisted Navigation System for the Visually Impaired},
   author      = {Silva, M. C. B. C. and Bispo, Breno C. and Silva, C. M. and Cunha, N. A. and Santos, E. A. B. and Rodrigues, M. A. B.},
@@ -262,11 +245,10 @@
   pages       = {1439--1444},
   year        = {2022},
   doi         = {10.1007/978-3-030-70601-2_212},
-  html        = {https://doi.org/10.1007/978-3-030-70601-2_212}
 }
 
 @inproceedings{cunha2022plc,
-  abbr        = {CBEB},
+  abbr        = {IFMBE},
   bibtex_show = {true},
   title       = {Communication in Hospital Environment Using Power Line Communications},
   author      = {Cunha, N. A. and Bispo, Breno C. and Ferreira, K. R. C. and Alves, G. J. and Esteves, G. R. P. and Santos, E. A. B. and Rodrigues, M. A. B.},
@@ -277,11 +259,10 @@
   pages       = {1451--1455},
   year        = {2022},
   doi         = {10.1007/978-3-030-70601-2_214},
-  html        = {https://doi.org/10.1007/978-3-030-70601-2_214}
 }
 
 @inproceedings{silva2022orthosis,
-  abbr        = {CBEB},
+  abbr        = {IFMBE},
   bibtex_show = {true},
   title       = {Development and Customization of a Dennis Brown Orthosis Prototype Produced from Anthropometric Measurements by Additive Manufacturing},
   author      = {Silva, A. T. D. and Silveira, J. V. B. D. and Esteves, G. R. P. and Bispo, Breno C. and Cunha, N. A. and Kunkel, M. E. and Rodrigues, M. A. B.},
@@ -292,11 +273,10 @@
   pages       = {465--470},
   year        = {2022},
   doi         = {10.1007/978-3-030-70601-2_72},
-  html        = {https://doi.org/10.1007/978-3-030-70601-2_72}
 }
 
 @inproceedings{chaves2022telerehab,
-  abbr        = {CBEB},
+  abbr        = {IFMBE},
   bibtex_show = {true},
   title       = {Geriatric Physiotherapy: A Telerehabilitation System for Identifying Therapeutic Exercises},
   author      = {Chaves Filho, A. C. and Inocencio, A. V. M. and Ferreira, K. R. C. and Cavalcante, E. L. and Bispo, Breno C. and Rodrigues, C. M. B. and Lessa, P. S. and Rodrigues, M. A. B.},
@@ -307,11 +287,10 @@
   pages       = {969--974},
   year        = {2022},
   doi         = {10.1007/978-3-030-70601-2_144},
-  html        = {https://doi.org/10.1007/978-3-030-70601-2_144}
 }
 
 @inproceedings{silva2022pelvic,
-  abbr        = {CBEB},
+  abbr        = {IFMBE},
   bibtex_show = {true},
   title       = {Transducer for the Strengthening of the Pelvic Floor Through Electromyographic Biofeedback},
   author      = {Silva, C. M. and Bispo, Breno C. and Esteves, G. R. P. and Cavalcante, E. L. and Oliveira, A. L. B. and Silva, M. C. B. C. and Cunha, N. A. and Rodrigues, M. A. B.},
@@ -322,5 +301,48 @@
   pages       = {935--940},
   year        = {2022},
   doi         = {10.1007/978-3-030-70601-2_139},
-  html        = {https://doi.org/10.1007/978-3-030-70601-2_139}
+}
+
+% ============================================================
+% Talks & Seminars
+% ============================================================
+
+@misc{bispo2026cimpa_talk,
+  abbr            = {Talk},
+  title           = {Network Inference},
+  author          = {Bispo, Breno C.},
+  year            = {2026},
+  pubtype         = {talk},
+  additional_info = {. *CIMPA Research School – The Mathematics of Complex Systems: Theory and Applications*, Recife, Brazil}
+}
+
+@misc{bispo2025rome_talk,
+  abbr            = {Talk},
+  title           = {Application of Topological Signal Processing to Brain Networks},
+  author          = {Bispo, Breno C. and Sardellitti, Stefania and Santos, Fernando A. N. and Lima, Juliano B.},
+  year            = {2025},
+  pubtype         = {talk},
+  additional_info = {. *Cutting-Edge Perspectives on Brain Networks Workshop*, Universitas Mercatorum, Rome, Italy}
+}
+
+@misc{bispo2024amsterdam_talk,
+  abbr            = {Talk},
+  title           = {An Overview on Hypergraph Signal Processing and Its Application in Neuroscience},
+  author          = {Bispo, Breno C.},
+  year            = {2024},
+  pubtype         = {talk},
+  additional_info = {. *KdVI DM Seminar*, University of Amsterdam, Amsterdam, Netherlands}
+}
+
+% ============================================================
+% Posters & Extended Abstracts
+% ============================================================
+
+@misc{bispo2024gspw_poster,
+  abbr            = {Poster},
+  title           = {Emergence of Higher-Order Functional Brain Connectivity with Hypergraph Signal Processing},
+  author          = {Bispo, Breno C. and Santos, Fernando A. N. and de Oliveira Neto, J. R. and Lima, Juliano B.},
+  year            = {2024},
+  pubtype         = {poster},
+  additional_info = {. *Graph Signal Processing Workshop 2024* (extended abstract), Delft, Netherlands}
 }

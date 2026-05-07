@@ -182,6 +182,70 @@
   }
 }
 
+/*******************************************************************************
+ * Publication filter bar
+ ******************************************************************************/
+
+.pub-filters {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+
+  .filter-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .filter-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--global-text-color-light);
+    min-width: 68px;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  /* Override Bootstrap btn-group border-radius collapsing */
+  .btn-group > .filter-btn {
+    border-radius: 1rem !important;
+  }
+
+  .filter-btn {
+    color: var(--global-text-color);
+    background: transparent;
+    border: 1px solid var(--global-divider-color);
+    padding: 0.18rem 0.8rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+
+    &:hover {
+      color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+      background: transparent;
+    }
+
+    &.active {
+      color: #fff !important;
+      background-color: var(--global-theme-color) !important;
+      border-color: var(--global-theme-color) !important;
+    }
+  }
+}
+
+/*******************************************************************************
+ * Citations / badge colours
+ ******************************************************************************/
+
 .citation,
 .citation-number {
   color: var(--global-theme-color);
