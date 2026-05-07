@@ -1,14 +1,9 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - breno-c-bispo
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - breno-c-bispo/CIMPA-School-Network-Inference
+  - breno-c-bispo/HGSP_BrainFunctionalConnectivityAnalysis
+  - breno-c-bispo/Emergence-of-Higher-Order-Functional-Brain-Connectivity-with-HGSP

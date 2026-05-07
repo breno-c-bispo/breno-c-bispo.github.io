@@ -10,16 +10,17 @@ cv:
     brain network analysis and neuroscience.
 
   social_networks:
-    - network: GitHub
-      username: breno-c-bispo
-    - network: LinkedIn
-      username: breno-c-bispo-970473157
     - network: Google-Scholar
       username: phr4dW8AAAAJ
-    - network: ORCID
-      username: 0000-0002-6927-3854
     - network: Lattes
       username: 5037149418666053
+    - network: LinkedIn
+      username: breno-c-bispo-970473157
+    - network: GitHub
+      username: breno-c-bispo
+    - network: ORCID
+      username: 0000-0002-6927-3854
+    
 
   sections:
     Education:
