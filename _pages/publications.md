@@ -71,11 +71,12 @@ nav_order: 2
   }
 
   function getPubType(row) {
-    var et   = (row.getAttribute('data-entrytype') || '').toLowerCase().trim();
-    var note = (row.getAttribute('data-note')      || '').toLowerCase();
-    if (note.indexOf('submit') !== -1 || note.indexOf('review') !== -1) return 'under-review';
-    if (et === 'article')                                                return 'journal';
-    if (et === 'inproceedings' || et === 'incollection')                return 'conference';
+    var pt = (row.getAttribute('data-pubtype') || '').toLowerCase().trim();
+    var et = (row.getAttribute('data-entrytype') || '').toLowerCase().trim();
+    /* Explicit marker wins — avoids any string-matching fragility */
+    if (pt === 'under-review')                               return 'under-review';
+    if (et === 'article')                                    return 'journal';
+    if (et === 'inproceedings' || et === 'incollection')     return 'conference';
     return 'other';
   }
 
