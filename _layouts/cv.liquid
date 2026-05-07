@@ -132,6 +132,9 @@ layout: default
                       {% elsif network_lc == 'researchgate' %}
                         {% assign icon_class = 'ai ai-researchgate' %}
                         {% assign profile_url = 'https://www.researchgate.net/profile/' | append: sn.username %}
+                      {% elsif network_lc == 'lattes' %}
+                        {% assign icon_class = 'ai ai-lattes' %}
+                        {% assign profile_url = 'http://lattes.cnpq.br/' | append: sn.username %}
                       {% else %}
                         {% assign icon_class = 'fa-solid fa-link' %}
                         {% assign profile_url = sn.username %}

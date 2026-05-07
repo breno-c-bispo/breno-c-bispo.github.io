@@ -4,7 +4,8 @@
 cv_pdf: /assets/pdf/cv.pdf # path to your CV PDF file (update when PDF is available)
 email: breno.bispo@ufpe.br # your institutional email address
 github_username: breno-c-bispo # your GitHub username
-# orcid_id: # your ORCID ID (e.g., 0000-0000-0000-0000) — add when available
-# linkedin_username: # your LinkedIn username — add when available
+orcid_id: 0000-0002-6927-3854
+linkedin_username: breno-c-bispo-970473157
 scholar_userid: phr4dW8AAAAJ # your Google Scholar ID
+lattes_id: 5037149418666053 # Currículo Lattes (CNPq)
 rss_icon: true # comment this line to hide the RSS icon
