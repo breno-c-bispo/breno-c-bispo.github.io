@@ -16,8 +16,7 @@ nav_order: 2
   <div class="filter-row mb-2">
     <span class="filter-label">Category</span>
     <div class="btn-group flex-wrap" role="group" aria-label="Filter by category">
-      <button class="btn btn-sm filter-btn active" data-filter="category" data-value="all">All</button>
-      <button class="btn btn-sm filter-btn" data-filter="category" data-value="paper">Papers</button>
+      <button class="btn btn-sm filter-btn active" data-filter="category" data-value="paper">Papers</button>
       <button class="btn btn-sm filter-btn" data-filter="category" data-value="talk">Talks</button>
       <button class="btn btn-sm filter-btn" data-filter="category" data-value="poster">Posters</button>
     </div>
@@ -59,7 +58,7 @@ nav_order: 2
 (function () {
   'use strict';
 
-  var activeCategory = 'all';
+  var activeCategory = 'paper'; /* "Papers" is the default active category */
   var activeType     = 'all';
   var activeYear     = 'all';
 
