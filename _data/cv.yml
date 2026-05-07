@@ -1,7 +1,7 @@
 cv:
   name: Breno Cordeiro Bispo
   label: Ph.D. Candidate in Electrical Engineering
-  email: brenoc94@gmail.com
+  email: breno.bispo@ufpe.br
   location: Recife, PE, Brazil
   image: ""
   summary: >
@@ -12,10 +12,10 @@ cv:
   social_networks:
     - network: GitHub
       username: breno-c-bispo
-    # - network: LinkedIn
-    #   username: # add your LinkedIn username
-    # - network: ORCID
-    #   username: # add your ORCID
+    - network: LinkedIn
+      username: breno-c-bispo-970473157 # add your LinkedIn username
+    - network: ORCID
+      username: 0000-0002-6927-3854 # add your ORCID
 
   sections:
     Education:
