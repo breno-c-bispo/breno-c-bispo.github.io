@@ -1,11 +1,11 @@
 cv:
   name: Breno Cordeiro Bispo
-  label: Ph.D. Candidate in Electrical Engineering
+  label: Ph.D. in Electrical Engineering
   email: breno.bispo@ufpe.br
   location: Recife, PE, Brazil
   image: ""
   summary: >
-    Ph.D. candidate in Electrical Engineering at UFPE (Brazil). Research focuses on Topological Signal
+    Ph.D. in Electrical Engineering at UFPE (Brazil). Research focuses on Topological Signal
     Processing, Graph/Hypergraph Signal Processing, Machine Learning, and their applications in
     brain network analysis and neuroscience.
 
@@ -76,9 +76,9 @@ cv:
           - "Advisor: Prof. Marco A. B. Rodrigues"
 
     Experience:
-      - company: Universitas Mercatorum & University of Amsterdam
+      - company: Universitas Mercatorum & Univ. of Amsterdam
         position: Visiting Researcher (TSP-ARK Project)
-        location: Rome, Italy / Amsterdam, Netherlands
+        location: Rome / Amsterdam
         start_date: 2025-07
         end_date: 2025-10
         highlights:
@@ -108,9 +108,11 @@ cv:
           - "Electric Circuits (2014); Digital Electronics (2016–17); Analog Electronics (2017)"
 
     Awards:
-      - title: SBrT Digital Communications Challenge for Military Applications
-        date: 2017
-        awarder: Brazilian Telecommunications Society (SBrT)
+
+      - title: CAPES Doctoral Internship Abroad (PDSE)
+        date: 2023
+        awarder: CAPES (Brazilian Federal Agency for Graduate Education)
+        summary: "Funded visiting researcher period at University of Amsterdam (Nov. 2023 – Jul. 2024)"
 
       - title: CNPq Doctoral Research Grant
         date: 2022
@@ -120,10 +122,9 @@ cv:
         date: 2019
         awarder: National Council for Scientific and Technological Development (CNPq)
 
-      - title: CAPES Doctoral Internship Abroad (PDSE)
-        date: 2023
-        awarder: CAPES (Brazilian Federal Agency for Graduate Education)
-        summary: "Funded visiting researcher period at University of Amsterdam (Nov. 2023 – Jul. 2024)"
+      - title: SBrT Digital Communications Challenge for Military Applications
+        date: 2017
+        awarder: Brazilian Telecommunications Society (SBrT)
 
       - title: CAPES Science Without Borders Grant
         date: 2015
@@ -132,29 +133,41 @@ cv:
 
     Skills:
       - name: Signal Processing & Mathematics
-        level: Expert
         icon: fa-solid fa-wave-square
-        keywords: "Topological Signal Processing, Graph Signal Processing, Hypergraph Signal Processing, Hodge Theory, Spectral Methods"
+        keywords:
+          - Topological Signal Processing
+          - Graph Signal Processing
+          - Hypergraph Signal Processing
+          - Discrete Fractional Fourier Transform
 
       - name: Machine Learning
-        level: Advanced
         icon: fa-solid fa-brain
-        keywords: "Deep Learning, Graph Neural Networks, Classification, Clustering"
+        keywords:
+          - (Un)supervised Learning
 
       - name: Programming
-        level: Advanced
         icon: fa-solid fa-code
-        keywords: "Python, MATLAB, C/C++"
+        keywords:
+          - Python
+          - MATLAB
+          - C/C++
 
       - name: Hardware & Embedded Systems
-        level: Intermediate
         icon: fa-solid fa-microchip
-        keywords: "VHDL, Verilog, Arduino, ESP32, FPGA (Altera), IoT (MQTT, LoRa, BLE)"
+        keywords:
+          - VHDL
+          - Verilog
+          - Arduino
+          - ESP32
+          - FPGA (Altera)
+          - IoT (MQTT, LoRa, BLE)
 
       - name: EDA & Design Tools
-        level: Intermediate
-        icon: fa-solid fa-tools
-        keywords: "Quartus, KiCAD, LTSpice"
+        icon: fa-solid fa-screwdriver-wrench
+        keywords:
+          - Quartus
+          - KiCAD
+          - LTSpice
 
     Languages:
       - name: Portuguese
@@ -167,19 +180,37 @@ cv:
         summary: "Intermediate (TELC B1)"
 
     Projects:
-      - name: TSP-ARK
-        summary: "Topological Signal Processing – Applications in bRain and Knowledge Networks. Novel topological methods for brain network analysis and knowledge graphs."
+      - name: Graph Signal Processing — Theoretical Contributions and Application Scenarios
+        summary: "Develops tools that generalise classical signal processing concepts to signals defined over graph-structured domains — including sensor networks, brain activity, and digital images — in a cooperative network involving Brazilian and international universities."
+        start_date: 2024
+        end_date: present
+        highlights:
+          - "PI: Prof. Juliano B. Lima (UFPE)"
+          - "Status: ongoing"
+      
+      - name: "TSP-ARK — Topological Signal Processing: Applications in bRain and Knowledge Networks"
+        summary: "Develops novel topological signal processing frameworks — leveraging Hodge Laplacians, cross-Laplacian operators, and cell multicomplex representations — with applications to brain network analysis and knowledge graphs."
         start_date: 2024
         end_date: 2026
         highlights:
-          - "International collaboration: UFPE, University of Amsterdam, Universitas Mercatorum"
+          - "International collaboration: UFPE (Brazil), University of Amsterdam (Netherlands), Universitas Mercatorum (Rome, Italy)"
+          - "PIs: Prof. Stefania Sardellitti (Universitas Mercatorum) and Prof. Fernando A. N. Santos (UvA)"
+          - "Funded by the TSP-ARK seed project; visiting researcher periods at UvA and Universitas Mercatorum (Jul.–Oct. 2025)"
+          - "Status: finished (Jul.–Oct. 2025)"
 
-      - name: Graph Signal Processing — Theory and Applications
-        summary: "Graph signal processing for IoT sensor networks and digital image representation. Contributions to higher-order functional brain connectivity with hypergraph signal processing."
+      - name: Contributions to Signal Processing with Applications to IoT and Digital Image Representation
+        summary: "Advanced graph signal processing theory by introducing new tools for signals defined over graphs, targeting applications in IoT sensor networks and digital image representation. Funded by CNPq (doctoral fellowship) and CAPES (sandwich PhD fellowship at UvA, Nov. 2023 – Jul. 2024)."
         start_date: 2022
-        end_date: 2025
+        end_date: 2024
+        highlights:
+          - "PI: Prof. Juliano B. Lima (UFPE)"
+          - "Topics: graph signal processing, IoT sensor networks, digital image representation"
+          - "Status: finished (Nov. 2023 – Jul. 2024)"
 
-      - name: Vital Sign Monitoring via NFC
-        summary: "Batteryless NFC device for heart rate and SpO2 acquisition. Wearable system for remote patient monitoring and post-COVID-19 rehabilitation."
-        start_date: 2019
+      - name: Monitoring of Therapeutic Exercises and Haemodynamic Parameters for Post-COVID-19 Patients
+        summary: "Developed and validated a wearable device for non-invasive monitoring of vital signs (heart rate, SpO2, blood pressure) and therapeutic exercises via accelerometry and imaging, targeting remote rehabilitation of post-hospitalisation COVID-19 patients. Data were processed by a neural network for exercise classification."
+        start_date: 2020
         end_date: 2021
+        highlights:
+          - "PI: Prof. Marco A. B. Rodrigues (UFPE)"
+          - "Status: finished (2021)"
