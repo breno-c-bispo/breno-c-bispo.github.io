@@ -2,13 +2,16 @@
 layout: page
 permalink: /publications/
 title: publications
-description: >
-  For a full list, see my
-  <a href="https://scholar.google.com/citations?user=phr4dW8AAAAJ&hl=en" target="_blank" style="color:#4285F4; font-weight:600;">Google Scholar</a> profile.
-  Use the filters below to browse by category, type, or year.
+description: publications in reversed chronological order
 nav: true
 nav_order: 2
 ---
+
+<p>
+  For a full list see my
+  <a href="https://scholar.google.com/citations?user=phr4dW8AAAAJ&hl=en" target="_blank" style="color:#4285F4; font-weight:600;">Google Scholar</a>
+  profile. Use the filters below to browse by category, type, or year.
+</p>
 
 <!-- Filter UI -->
 <div class="pub-filters mb-4">
