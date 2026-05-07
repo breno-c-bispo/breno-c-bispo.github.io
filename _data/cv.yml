@@ -13,9 +13,11 @@ cv:
     - network: GitHub
       username: breno-c-bispo
     - network: LinkedIn
-      username: breno-c-bispo-970473157 # add your LinkedIn username
+      username: breno-c-bispo-970473157
+    - network: Google-Scholar
+      username: phr4dW8AAAAJ
     - network: ORCID
-      username: 0000-0002-6927-3854 # add your ORCID
+      username: 0000-0002-6927-3854
 
   sections:
     Education:
@@ -78,7 +80,7 @@ cv:
     Experience:
       - company: Universitas Mercatorum & Univ. of Amsterdam
         position: Visiting Researcher (TSP-ARK Project)
-        location: Rome / Amsterdam
+        location: Rome, Italy / Amsterdam, Netherlands
         start_date: 2025-07
         end_date: 2025-10
         highlights:

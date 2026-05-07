@@ -108,6 +108,42 @@ layout: default
                   </td>
                 </tr>
               {% endif %}
+              {% if cv.social_networks %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold"><b>Links</b></td>
+                  <td class="p-1 pl-2 font-weight-light">
+                    {% for sn in cv.social_networks %}
+                      {% assign network_lc = sn.network | downcase %}
+                      {% if network_lc == 'github' %}
+                        {% assign icon_class = 'fa-brands fa-github' %}
+                        {% assign profile_url = 'https://github.com/' | append: sn.username %}
+                      {% elsif network_lc == 'linkedin' %}
+                        {% assign icon_class = 'fa-brands fa-linkedin' %}
+                        {% assign profile_url = 'https://www.linkedin.com/in/' | append: sn.username %}
+                      {% elsif network_lc == 'orcid' %}
+                        {% assign icon_class = 'fa-brands fa-orcid' %}
+                        {% assign profile_url = 'https://orcid.org/' | append: sn.username %}
+                      {% elsif network_lc == 'google-scholar' %}
+                        {% assign icon_class = 'ai ai-google-scholar' %}
+                        {% assign profile_url = 'https://scholar.google.com/citations?user=' | append: sn.username %}
+                      {% elsif network_lc == 'twitter' or network_lc == 'x' %}
+                        {% assign icon_class = 'fa-brands fa-x-twitter' %}
+                        {% assign profile_url = 'https://twitter.com/' | append: sn.username %}
+                      {% elsif network_lc == 'researchgate' %}
+                        {% assign icon_class = 'ai ai-researchgate' %}
+                        {% assign profile_url = 'https://www.researchgate.net/profile/' | append: sn.username %}
+                      {% else %}
+                        {% assign icon_class = 'fa-solid fa-link' %}
+                        {% assign profile_url = sn.username %}
+                      {% endif %}
+                      <a href="{{ profile_url }}" target="_blank" rel="noopener noreferrer"
+                         title="{{ sn.network }}" style="margin-right: 0.6rem; font-size: 1.2rem;">
+                        <i class="{{ icon_class }}"></i>
+                      </a>
+                    {% endfor %}
+                  </td>
+                </tr>
+              {% endif %}
             </table>
           </div>
         {% endif %}
