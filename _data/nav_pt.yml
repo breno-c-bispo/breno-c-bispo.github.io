@@ -1,0 +1,14 @@
+# Maps each EN page title (lowercase) to its Portuguese label and URL.
+# Pages without a PT version omit href_pt (JS will keep the EN URL).
+about:
+  title: sobre
+  href_pt: /pt/
+publications:
+  title: publicações
+  href_pt: /pt/publications/
+repositories:
+  title: repositórios
+  href_pt: /pt/repositories/
+cv:
+  title: currículo
+  href_pt: /pt/cv/

@@ -42,24 +42,39 @@ layout: default
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
+      {% if page.lang == 'pt-BR' %}
+        {% assign _news_label = 'notícias' %}
+        {% assign _news_href  = '/pt/news/' %}
+      {% else %}
+        {% assign _news_label = 'news' %}
+        {% assign _news_href  = '/news/' %}
+      {% endif %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <a href="{{ _news_href | relative_url }}" style="color: inherit">{{ _news_label }}</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
+      {% assign _posts_label = page.lang == 'pt-BR' ? 'últimas postagens' : 'latest posts' %}
       <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">{{ _posts_label }}</a>
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
+      {% if page.lang == 'pt-BR' %}
+        {% assign _pubs_label = 'publicações selecionadas' %}
+        {% assign _pubs_href  = '/pt/publications/' %}
+      {% else %}
+        {% assign _pubs_label = 'selected publications' %}
+        {% assign _pubs_href  = '/publications/' %}
+      {% endif %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ _pubs_href | relative_url }}" style="color: inherit">{{ _pubs_label }}</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
