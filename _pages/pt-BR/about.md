@@ -10,7 +10,7 @@ subtitle: >
 
 profile:
   align: right
-  image: prof_pic.png
+  image: prof_pic_gray.png
   image_circular: false
   more_info: >
     <p>Recife, Pernambuco, Brasil</p>
