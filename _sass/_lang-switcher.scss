@@ -1,0 +1,63 @@
+/*****************************
+ * Language switcher (fixed top-left)
+ *****************************/
+
+#lang-switcher {
+  position: fixed;
+  top: 68px; /* just below the fixed navbar */
+  left: 1rem;
+  z-index: 1040;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  padding: 4px 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.13);
+
+  .ls-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    text-decoration: none !important;
+    color: var(--global-text-color);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    transition: background 0.15s, color 0.15s;
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none !important;
+    }
+
+    &.ls-active {
+      background: var(--global-theme-color);
+      color: #fff !important;
+    }
+
+    .ls-flag {
+      font-size: 1.05rem;
+      line-height: 1;
+    }
+  }
+
+  /* smaller on mobile so it doesn't crowd the screen */
+  @media (max-width: 576px) {
+    top: 58px;
+    left: 0.5rem;
+    padding: 3px 4px;
+
+    .ls-btn {
+      padding: 2px 5px;
+      font-size: 0.7rem;
+
+      .ls-flag {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
