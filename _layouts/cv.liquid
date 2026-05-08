@@ -57,8 +57,12 @@ layout: default
       {% endif %}
 
       {% if render_rendercv and site.data.cv and site.data.cv.cv %}
-        {% comment %} RenderCV format {% endcomment %}
-        {% assign cv = site.data.cv.cv %}
+        {% comment %} RenderCV format — allow per-page cv_data override {% endcomment %}
+        {% if page.cv_data and site.data[page.cv_data] %}
+          {% assign cv = site.data[page.cv_data].cv %}
+        {% else %}
+          {% assign cv = site.data.cv.cv %}
+        {% endif %}
 
         <!-- Header/Contact Information -->
         {% if cv.name or cv.label or cv.location or cv.email or cv.phone or cv.website %}

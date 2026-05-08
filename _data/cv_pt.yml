@@ -1,0 +1,216 @@
+cv:
+  name: Breno Cordeiro Bispo
+  label: Doutor em Engenharia Elétrica
+  email: breno.bispo@ufpe.br
+  location: Recife, PE, Brasil
+  image: ""
+  summary: >
+    Doutor em Engenharia Elétrica pela UFPE (Brasil). Pesquisa focada em Processamento
+    Topológico de Sinais, Processamento de Sinais em Grafos/Hipergrafo, Aprendizado de
+    Máquina e suas aplicações em análise de redes cerebrais e neurociência.
+
+  social_networks:
+    - network: Google-Scholar
+      username: phr4dW8AAAAJ
+    - network: Lattes
+      username: 5037149418666053
+    - network: LinkedIn
+      username: breno-c-bispo-970473157
+    - network: GitHub
+      username: breno-c-bispo
+    - network: ORCID
+      username: 0000-0002-6927-3854
+
+  sections:
+    Education:
+      - institution: Universidade Federal de Pernambuco (UFPE)
+        location: Recife, Brasil
+        url: https://www.ufpe.br/
+        area: Engenharia Elétrica
+        studyType: Doutorado
+        start_date: 2022
+        end_date: 2026
+        highlights:
+          - "Tese: Processamento de Sinais de Alta Ordem e Suas Aplicações na Análise de Redes Cerebrais"
+          - "Orientadores: Prof. Juliano B. Lima (UFPE) e Prof. Fernando A. N. Santos (UvA)"
+          - "Financiado pelo CNPq"
+
+      - institution: Universidade de Amsterdã (UvA)
+        location: Amsterdã, Países Baixos
+        url: https://www.uva.nl/en
+        area: Matemática (KdVI & IAS)
+        studyType: Pesquisador Visitante
+        start_date: 2023-11
+        end_date: 2024-07
+        highlights:
+          - "Supervisor: Prof. Fernando A. N. Santos"
+          - "Financiado pela CAPES (estágio doutoral no exterior — PDSE)"
+
+      - institution: Universidade Federal de Pernambuco (UFPE)
+        location: Recife, Brasil
+        url: https://www.ufpe.br/
+        area: Engenharia Elétrica
+        studyType: Mestrado
+        start_date: 2019
+        end_date: 2021
+        highlights:
+          - "Dissertação: Monitoramento de Sinais Vitais via NFC"
+          - "Orientador: Prof. Marco A. B. Rodrigues"
+          - "Financiado pelo CNPq"
+
+      - institution: Hochschule Offenburg
+        location: Offenburg, Alemanha
+        url: https://www.hs-offenburg.de/
+        area: "Engenharia Elétrica / Tecnologia da Informação"
+        studyType: Estudante de Intercâmbio (Graduação)
+        start_date: 2015
+        end_date: 2016
+        highlights:
+          - "Programa CAPES Ciências sem Fronteiras"
+
+      - institution: Universidade Federal de Pernambuco (UFPE)
+        location: Recife, Brasil
+        url: https://www.ufpe.br/
+        area: Engenharia Eletrônica
+        studyType: Bacharelado
+        start_date: 2012
+        end_date: 2019
+        highlights:
+          - "TCC: Sistema de Controle de Acesso via RFID/NFC"
+          - "Orientador: Prof. Marco A. B. Rodrigues"
+
+    Experience:
+      - company: Universitas Mercatorum & Univ. de Amsterdã
+        position: Pesquisador Visitante (Projeto TSP-ARK)
+        location: Roma / Amsterdã
+        start_date: 2025-07
+        end_date: 2025-10
+        highlights:
+          - "Projeto: Processamento Topológico de Sinais – Aplicações em Redes Cerebrais e de Conhecimento"
+          - "Supervisores: Prof.ª Stefania Sardellitti & Prof. Fernando A. N. Santos"
+
+      - company: Universidade Federal de Pernambuco (UFPE)
+        position: Monitor de Disciplina – Eletrônica Digital 1A
+        location: Recife, Brasil
+        start_date: 2021-02
+        end_date: 2021-06
+
+      - company: EngeBIO NE
+        position: Estagiário de Engenharia
+        location: Recife, Brasil
+        start_date: 2018-03
+        end_date: 2018-12
+        highlights:
+          - "Desenvolvimento de sistema de controle de acesso via RFID/NFC"
+
+      - company: Universidade Federal de Pernambuco (UFPE)
+        position: Monitor de Disciplinas
+        location: Recife, Brasil
+        start_date: 2014
+        end_date: 2017
+        highlights:
+          - "Circuitos Elétricos (2014); Eletrônica Digital (2016–17); Eletrônica Analógica (2017)"
+
+    Awards:
+      - title: Bolsa de Estágio Doutoral no Exterior (PDSE — CAPES)
+        date: 2023
+        awarder: CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior)
+        summary: "Financiou período como pesquisador visitante na Universidade de Amsterdã (nov. 2023 – jul. 2024)"
+
+      - title: Bolsa de Doutorado CNPq
+        date: 2022
+        awarder: Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)
+
+      - title: Bolsa de Mestrado CNPq
+        date: 2019
+        awarder: Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)
+
+      - title: Desafio de Comunicações Digitais para Aplicações Militares — SBrT
+        date: 2017
+        awarder: Sociedade Brasileira de Telecomunicações (SBrT)
+
+      - title: Bolsa Ciências sem Fronteiras (CAPES)
+        date: 2015
+        awarder: CAPES
+        summary: "Financiou período de intercâmbio na Hochschule Offenburg, Alemanha"
+
+    Skills:
+      - name: Processamento de Sinais & Matemática
+        icon: fa-solid fa-wave-square
+        keywords:
+          - Processamento Topológico de Sinais
+          - Processamento de Sinais em Grafos
+          - Processamento de Sinais em Hipergrafo
+          - Transformada de Fourier Fracionária Discreta
+
+      - name: Aprendizado de Máquina
+        icon: fa-solid fa-brain
+        keywords:
+          - Aprendizado (Não) Supervisionado
+
+      - name: Programação
+        icon: fa-solid fa-code
+        keywords:
+          - Python
+          - MATLAB
+          - C/C++
+
+      - name: Hardware & Sistemas Embarcados
+        icon: fa-solid fa-microchip
+        keywords:
+          - VHDL
+          - Verilog
+          - Arduino
+          - ESP32
+          - FPGA (Altera)
+          - IoT (MQTT, LoRa, BLE)
+
+      - name: Ferramentas EDA & Projeto
+        icon: fa-solid fa-screwdriver-wrench
+        keywords:
+          - Quartus
+          - KiCAD
+          - LTSpice
+
+    Languages:
+      - name: Português
+        summary: "Nativo"
+
+      - name: Inglês
+        summary: "Fluente (TOEFL ITP B2)"
+
+      - name: Alemão
+        summary: "Intermediário (TELC B1)"
+
+    Projects:
+      - name: Processamento de Sinais em Grafos — Contribuições Teóricas e Cenários de Aplicação
+        summary: "Desenvolve ferramentas que generalizam conceitos clássicos de processamento de sinais para domínios estruturados em grafos — incluindo redes de sensores, atividade cerebral e imagens digitais — em rede cooperativa envolvendo universidades brasileiras e internacionais."
+        start_date: 2024
+        end_date: present
+        highlights:
+          - "Coordenador: Prof. Juliano B. Lima (UFPE)"
+          - "Status: em andamento"
+
+      - name: "TSP-ARK — Processamento Topológico de Sinais: Aplicações em Redes Cerebrais e de Conhecimento"
+        summary: "Desenvolve arcabouços de processamento topológico de sinais — utilizando Laplacianos de Hodge, operadores cross-Laplacianos e representações em multicomplexos celulares — com aplicações à análise de redes cerebrais e grafos de conhecimento."
+        start_date: 2024
+        end_date: 2026
+        highlights:
+          - "Colaboração internacional: UFPE (Brasil), Universidade de Amsterdã (Países Baixos), Universitas Mercatorum (Roma, Itália)"
+          - "Coordenadores: Prof.ª Stefania Sardellitti (Universitas Mercatorum) e Prof. Fernando A. N. Santos (UvA)"
+          - "Financiado pelo projeto semente TSP-ARK; períodos de visita na UvA e Universitas Mercatorum (jul.–out. 2025)"
+
+      - name: Contribuições ao Processamento de Sinais com Aplicações em IoT e Representação de Imagens Digitais
+        summary: "Avançou a teoria de processamento de sinais em grafos introduzindo novas ferramentas para sinais definidos sobre grafos, voltadas a aplicações em redes de sensores IoT e representação de imagens digitais. Financiado pelo CNPq (bolsa de doutorado) e CAPES (bolsa PDSE na UvA, nov. 2023 – jul. 2024)."
+        start_date: 2022
+        end_date: 2024
+        highlights:
+          - "Coordenador: Prof. Juliano B. Lima (UFPE)"
+          - "Temas: processamento de sinais em grafos, redes de sensores IoT, representação de imagens digitais"
+
+      - name: Monitoramento de Exercícios Terapêuticos e Parâmetros Hemodinâmicos para Pacientes Pós-COVID-19
+        summary: "Desenvolveu e validou um dispositivo vestível para monitoramento não invasivo de sinais vitais (frequência cardíaca, SpO2, pressão arterial) e exercícios terapêuticos via acelerometria e imagem, voltado à reabilitação remota de pacientes pós-hospitalização por COVID-19. Os dados foram processados por uma rede neural para classificação de exercícios."
+        start_date: 2020
+        end_date: 2021
+        highlights:
+          - "Coordenador: Prof. Marco A. B. Rodrigues (UFPE)"
