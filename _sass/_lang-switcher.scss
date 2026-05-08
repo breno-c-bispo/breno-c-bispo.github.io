@@ -40,8 +40,12 @@
       cursor: default;
     }
 
+    /* flag-icons renders as inline block with fixed ratio */
     .ls-flag {
-      font-size: 1rem;
+      display: inline-block;
+      width: 1.2em;
+      height: 0.9em;
+      vertical-align: middle;
       line-height: 1;
     }
 
@@ -61,7 +65,8 @@
       font-size: 0.68rem;
 
       .ls-flag {
-        font-size: 0.88rem;
+        width: 1.1em;
+        height: 0.82em;
       }
     }
   }
