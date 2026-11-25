@@ -1,0 +1,102 @@
+---
+---
+{% if entry.doi %}
+  {% assign card_href = 'https://doi.org/' | append: entry.doi %}
+{% elsif entry.arxiv %}
+  {% assign card_href = 'https://arxiv.org/abs/' | append: entry.arxiv %}
+{% elsif entry.url %}
+  {% assign card_href = entry.url %}
+{% elsif entry.pdf %}
+  {% assign card_href = entry.pdf | prepend: '/assets/pdf/' | relative_url %}
+{% else %}
+  {% assign card_href = '/publications/' | relative_url %}
+{% endif %}
+{% assign entry_pubtype = entry.pubtype | default: '' %}
+<article class="pub-card" id="card-{{ entry.key }}">
+  <a class="pub-card-media" href="{{ card_href }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+    {% if entry.preview %}
+      {% if entry.preview contains '://' %}
+        {% assign preview_src = entry.preview %}
+      {% else %}
+        {% assign preview_src = entry.preview | prepend: '/assets/img/publication_preview/' | relative_url %}
+      {% endif %}
+      <img src="{{ preview_src }}" alt="" loading="lazy" decoding="async">
+    {% else %}
+      <div class="pub-card-placeholder">
+        <svg viewBox="0 0 160 90" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="30,25 70,15 60,55" />
+          <polygon points="70,15 110,35 60,55" />
+          <polygon points="110,35 135,70 95,72" />
+          <g>
+            <line x1="30" y1="25" x2="70" y2="15" />
+            <line x1="70" y1="15" x2="60" y2="55" />
+            <line x1="30" y1="25" x2="60" y2="55" />
+            <line x1="70" y1="15" x2="110" y2="35" />
+            <line x1="110" y1="35" x2="60" y2="55" />
+            <line x1="110" y1="35" x2="135" y2="70" />
+            <line x1="135" y1="70" x2="95" y2="72" />
+            <line x1="95" y1="72" x2="110" y2="35" />
+            <line x1="60" y1="55" x2="95" y2="72" />
+            <line x1="60" y1="55" x2="25" y2="70" />
+          </g>
+          <circle cx="30" cy="25" r="3" />
+          <circle cx="70" cy="15" r="3" />
+          <circle cx="60" cy="55" r="3" />
+          <circle cx="110" cy="35" r="3" />
+          <circle cx="135" cy="70" r="3" />
+          <circle cx="95" cy="72" r="3" />
+          <circle cx="25" cy="70" r="3" />
+        </svg>
+      </div>
+    {% endif %}
+  </a>
+  <div class="pub-card-body">
+    <div class="pub-card-meta">
+      {% if entry.abbr %}
+        <span class="pub-card-venue{% if entry_pubtype == 'under-review' %} is-review{% endif %}">{{ entry.abbr }}</span>
+      {% endif %}
+      <span class="pub-card-year">{{ entry.year }}</span>
+    </div>
+    <h3 class="pub-card-title">
+      <a href="{{ card_href }}" target="_blank" rel="noopener">{{ entry.title }}</a>
+    </h3>
+    <p class="pub-card-authors">
+      {%- for author in entry.author_array limit: 3 -%}
+        {%- assign card_last = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
+        {%- assign card_is_self = false -%}
+        {%- if site.scholar.last_name contains card_last and site.scholar.first_name contains author.first -%}
+          {%- assign card_is_self = true -%}
+        {%- endif -%}
+        {%- unless forloop.first %}, {% endunless -%}
+        {%- if card_is_self -%}
+          <em>
+            {{- author.first }}
+            {{ card_last -}}
+          </em>
+        {%- else -%}
+          {{ author.first }}
+          {{ card_last }}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if entry.author_array.size > 3 %} et al.{% endif -%}
+    </p>
+    <div class="pub-card-links">
+      {% if entry.doi %}
+        <a href="https://doi.org/{{ entry.doi }}" target="_blank" rel="noopener">DOI</a>
+      {% endif %}
+      {% if entry.arxiv %}
+        <a href="https://arxiv.org/abs/{{ entry.arxiv }}" target="_blank" rel="noopener">arXiv</a>
+      {% endif %}
+      {% if entry.pdf %}
+        {% if entry.pdf contains '://' %}
+          <a href="{{ entry.pdf }}" target="_blank" rel="noopener">PDF</a>
+        {% else %}
+          <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" target="_blank" rel="noopener">PDF</a>
+        {% endif %}
+      {% endif %}
+      {% if entry.code %}
+        <a href="{{ entry.code }}" target="_blank" rel="noopener">Code</a>
+      {% endif %}
+    </div>
+  </div>
+</article>

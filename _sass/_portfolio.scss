@@ -1,0 +1,729 @@
+/*******************************************************************************
+ * Portfolio redesign: topological hero, research cards, visual publications
+ ******************************************************************************/
+
+@use "variables" as v;
+
+:root {
+  --hero-bg: #{v.$navy-900};
+  --hero-border: transparent;
+  --hero-text: #{v.$white-color};
+  --hero-muted: #b7c6dc;
+  --hero-accent: #{v.$sky-blue};
+  --hero-cell: #3584e4;
+  --hero-edge: rgba(158, 201, 255, 0.55);
+  --card-hover-border: #{v.$brand-blue};
+  --card-tint: rgba(26, 95, 180, 0.06);
+  --review-bg: #fdf1dc;
+  --review-text: #7a4a06;
+}
+
+html[data-theme="dark"] {
+  --hero-bg: #{v.$navy-950};
+  --hero-border: #{v.$ink-dark-divider};
+  --card-hover-border: #{v.$brand-blue-light};
+  --card-tint: rgba(120, 174, 237, 0.08);
+  --review-bg: #3a2a10;
+  --review-text: #f5c97a;
+}
+
+body {
+  font-family:
+    "Inter",
+    "Roboto",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
+
+// Bootstrap pins table text to #212529, unreadable in dark mode (news list)
+.table {
+  color: var(--global-text-color);
+}
+
+/*******************************************************************************
+ * Hero
+ ******************************************************************************/
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2.5rem;
+  padding: 2.5rem 2.25rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--hero-border);
+  background: var(--hero-bg);
+  overflow: hidden;
+
+  p,
+  span,
+  h1 {
+    color: var(--hero-text);
+  }
+
+  .hero-eyebrow {
+    margin: 0 0 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--hero-accent);
+  }
+
+  .hero-name {
+    margin: 0;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-tagline {
+    margin: 0.9rem 0 0;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: var(--hero-muted);
+  }
+
+  .hero-affiliation {
+    margin: 1rem 0 0;
+    font-size: 0.9rem;
+    color: var(--hero-muted);
+
+    a {
+      color: var(--hero-accent);
+      border-bottom: 1px solid rgba(158, 201, 255, 0.35);
+
+      &:hover {
+        text-decoration: none;
+        border-bottom-color: var(--hero-accent);
+      }
+    }
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(158, 201, 255, 0.45);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--hero-text);
+    transition:
+      background-color 0.15s,
+      border-color 0.15s,
+      color 0.15s;
+
+    &:hover {
+      text-decoration: none;
+      border-color: var(--hero-accent);
+      background: rgba(158, 201, 255, 0.1);
+    }
+  }
+
+  .hero-btn-primary {
+    background: var(--hero-accent);
+    border-color: var(--hero-accent);
+    color: v.$navy-900;
+
+    &:hover {
+      background: v.$white-color;
+      border-color: v.$white-color;
+      color: v.$navy-900;
+    }
+  }
+
+  .hero-art {
+    margin: 0;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .hero-canvas,
+  .hodge-legend {
+    display: none;
+  }
+
+  .hero-art.is-live {
+    .hero-fallback {
+      display: none;
+    }
+
+    .hero-canvas {
+      display: block;
+      width: 100%;
+      aspect-ratio: 340 / 260;
+    }
+
+    .hodge-legend {
+      display: block;
+    }
+  }
+
+  .hodge-modes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+    margin-top: 0.4rem;
+
+    button {
+      padding: 0.15rem 0.6rem;
+      border: 1px solid rgba(158, 201, 255, 0.3);
+      border-radius: 999px;
+      background: transparent;
+      font: inherit;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--hero-muted);
+      cursor: pointer;
+      transition:
+        background-color 0.2s,
+        border-color 0.2s,
+        color 0.2s;
+
+      &:hover {
+        border-color: var(--hero-accent);
+        color: var(--hero-text);
+      }
+
+      &.is-active {
+        background: rgba(158, 201, 255, 0.16);
+        border-color: var(--hero-accent);
+        color: var(--hero-text);
+      }
+
+      &[aria-pressed="true"] {
+        background: var(--hero-accent);
+        color: v.$navy-900;
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--hero-accent);
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  .hodge-caption {
+    min-height: 1.3em;
+    margin: 0.45rem 0 0;
+    font-size: 0.72rem;
+    text-align: center;
+    color: var(--hero-muted);
+  }
+
+  .cell {
+    fill: var(--hero-cell);
+    opacity: 0.28;
+    animation: cell-breathe 7s ease-in-out infinite;
+  }
+
+  .c2 {
+    animation-delay: -1.2s;
+  }
+  .c3 {
+    animation-delay: -2.4s;
+  }
+  .c4 {
+    animation-delay: -3.6s;
+  }
+  .c5 {
+    animation-delay: -4.8s;
+  }
+  .c6 {
+    animation-delay: -6s;
+  }
+
+  .edges line,
+  .cycle line {
+    stroke: var(--hero-edge);
+    stroke-width: 1.2;
+  }
+
+  .cycle line {
+    stroke-dasharray: 3 4;
+  }
+
+  .flow {
+    stroke: var(--hero-accent);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 6 14;
+    animation: edge-flow 2.4s linear infinite;
+  }
+
+  .f2 {
+    animation-duration: 3s;
+  }
+  .f3 {
+    animation-duration: 2s;
+    animation-direction: reverse;
+  }
+  .f4 {
+    animation-duration: 2.8s;
+  }
+  .f5 {
+    animation-duration: 2.2s;
+    animation-direction: reverse;
+  }
+
+  .nodes circle {
+    fill: #e6f0ff;
+    stroke: var(--hero-bg);
+    stroke-width: 2;
+  }
+}
+
+@keyframes cell-breathe {
+  0%,
+  100% {
+    opacity: 0.18;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes edge-flow {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero .cell,
+  .hero .flow {
+    animation: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+
+    .hero-name {
+      font-size: 2.1rem;
+    }
+
+    .hero-art {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  }
+}
+
+/*******************************************************************************
+ * Research areas
+ ******************************************************************************/
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2.5rem;
+}
+
+.research-card {
+  padding: 1.25rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.9rem;
+  background: var(--global-card-bg-color);
+  transition:
+    border-color 0.15s,
+    transform 0.15s;
+
+  &:hover {
+    border-color: var(--card-hover-border);
+    transform: translateY(-2px);
+  }
+
+  .research-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0.6rem;
+    background: var(--card-tint);
+
+    i {
+      color: var(--global-theme-color);
+      font-size: 1.1rem;
+    }
+
+    .glyph {
+      width: 1.75rem;
+      height: 1.75rem;
+      overflow: visible;
+      color: var(--global-theme-color);
+    }
+  }
+
+  .research-title {
+    margin: 0 0 0.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .research-text {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--global-text-color-light);
+  }
+}
+
+/* Animated research glyphs ------------------------------------------------- */
+
+.glyph {
+  .g-line {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .g-soft {
+    opacity: 0.45;
+  }
+
+  .g-face {
+    fill: currentColor;
+    fill-opacity: 0.16;
+    stroke: currentColor;
+    stroke-width: 1.4;
+    stroke-linejoin: round;
+  }
+
+  .g-node,
+  .g-bar {
+    fill: currentColor;
+  }
+}
+
+.glyph-curl .g-spin {
+  transform-box: view-box;
+  transform-origin: 20px 20px;
+  animation: glyph-spin 3.2s linear infinite;
+}
+
+.glyph-edges {
+  .g-face {
+    stroke: none;
+    animation: glyph-fill 5s ease-in-out infinite;
+  }
+
+  .g-draw {
+    stroke-dasharray: 1;
+    animation: glyph-draw 5s ease-in-out infinite;
+  }
+
+  .d2 {
+    animation-delay: 0.35s;
+  }
+  .d3 {
+    animation-delay: 0.7s;
+  }
+  .d4 {
+    animation-delay: 1.05s;
+  }
+  .d5 {
+    animation-delay: 1.4s;
+  }
+}
+
+.glyph-brain .g-flow {
+  stroke-width: 1.3;
+  stroke-dasharray: 2.5 3;
+  animation: glyph-flow 1.6s linear infinite;
+
+  &.f-b {
+    animation-direction: reverse;
+  }
+}
+
+.glyph-learning .g-bar {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: glyph-bar 3.6s ease-in-out infinite;
+
+  &.b1 {
+    opacity: 0.55;
+  }
+  &.b2 {
+    animation-delay: -1.2s;
+  }
+  &.b3 {
+    opacity: 0.75;
+    animation-delay: -2.4s;
+  }
+}
+
+@keyframes glyph-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glyph-draw {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  30%,
+  85% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 1;
+  }
+}
+
+@keyframes glyph-fill {
+  0%,
+  40% {
+    fill-opacity: 0;
+  }
+  55%,
+  85% {
+    fill-opacity: 0.3;
+  }
+  100% {
+    fill-opacity: 0;
+  }
+}
+
+@keyframes glyph-flow {
+  to {
+    stroke-dashoffset: -11;
+  }
+}
+
+@keyframes glyph-bar {
+  0%,
+  100% {
+    transform: scaleY(0.55);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glyph * {
+    animation: none !important;
+  }
+}
+
+/*******************************************************************************
+ * Selected publications grid
+ ******************************************************************************/
+
+.publications.pub-grid {
+  margin-top: 1rem;
+
+  ol.bibliography {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.25rem;
+
+    li {
+      margin: 0;
+      display: flex;
+    }
+  }
+}
+
+.pub-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background: var(--global-card-bg-color);
+  transition:
+    border-color 0.15s,
+    transform 0.15s;
+
+  &:hover {
+    border-color: var(--card-hover-border);
+    transform: translateY(-2px);
+  }
+
+  .pub-card-media {
+    display: block;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: v.$white-color;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .pub-card-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: var(--hero-bg);
+
+    svg {
+      width: 70%;
+      height: auto;
+    }
+
+    polygon {
+      fill: var(--hero-cell);
+      opacity: 0.35;
+    }
+
+    line {
+      stroke: var(--hero-edge);
+      stroke-width: 1;
+    }
+
+    circle {
+      fill: #e6f0ff;
+    }
+  }
+
+  .pub-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem 1.1rem 1.1rem;
+  }
+
+  .pub-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .pub-card-venue {
+    padding: 0.1rem 0.55rem;
+    border-radius: 999px;
+    font-weight: 600;
+    background: var(--card-tint);
+    color: var(--global-theme-color);
+
+    &.is-review {
+      background: var(--review-bg);
+      color: var(--review-text);
+    }
+  }
+
+  .pub-card-year {
+    color: var(--global-text-color-light);
+  }
+
+  .pub-card-title {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+
+    a {
+      color: var(--global-text-color);
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .pub-card-authors {
+    margin: 0 0 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: var(--global-text-color-light);
+
+    em {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--global-text-color);
+    }
+  }
+
+  .pub-card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: auto;
+
+    a {
+      padding: 0.15rem 0.6rem;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--global-text-color);
+
+      &:hover {
+        text-decoration: none;
+        color: var(--global-theme-color);
+        border-color: var(--global-theme-color);
+      }
+    }
+  }
+}
+
+/*******************************************************************************
+ * Full publications list: entries as cards
+ ******************************************************************************/
+
+.publications:not(.pub-grid) ol.bibliography li {
+  padding: 1rem 0.75rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.9rem;
+  background: var(--global-card-bg-color);
+  transition: border-color 0.15s;
+
+  &:hover {
+    border-color: var(--card-hover-border);
+  }
+
+  .bib-entry {
+    margin: 0;
+  }
+
+  .preview {
+    width: 100%;
+    background: v.$white-color;
+  }
+
+  .links a.btn {
+    border-radius: 999px;
+    border-color: var(--global-divider-color);
+    font-size: 0.72rem;
+  }
+}

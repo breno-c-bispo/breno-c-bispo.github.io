@@ -7,6 +7,7 @@
   data-year="{{ entry.year }}"
   data-entrytype="{{ entry.type }}"
   data-pubtype="{{ entry_pubtype }}"
+  data-topics="{{ entry.topic | downcase }}"
   data-note="{{ entry_note_lower }}"
 >
   {% if site.enable_publication_thumbnails %}
@@ -389,7 +390,7 @@
       <div class="bibtex hidden">
         {% highlight bibtex %}
         {{- entry.bibtex | hideCustomBibtex -}}
-        {% endhighlight %}
+      {% endhighlight %}
       </div>
     {% endif %}
 

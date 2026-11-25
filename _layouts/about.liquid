@@ -2,17 +2,21 @@
 layout: default
 ---
 <div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
+  {% if page.hero %}
+    {% include hero.liquid %}
+  {% else %}
+    <header class="post-header">
+      <h1 class="post-title">
+        {% if site.title == 'blank' %}
+          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+          {{ site.last_name }}
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+      </h1>
+      <p class="desc">{{ page.subtitle }}</p>
+    </header>
+  {% endif %}
 
   <article>
     {% if page.profile %}
@@ -40,14 +44,22 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <!-- Research areas -->
+    {% if page.research_areas %}
+      <h2>
+        {% if page.lang == 'pt-BR' %}linhas de pesquisa{% else %}research{% endif %}
+      </h2>
+      {% include research_areas.liquid %}
+    {% endif %}
+
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       {% if page.lang == 'pt-BR' %}
         {% assign _news_label = 'notícias' %}
-        {% assign _news_href  = '/pt/news/' %}
+        {% assign _news_href = '/pt/news/' %}
       {% else %}
         {% assign _news_label = 'news' %}
-        {% assign _news_href  = '/news/' %}
+        {% assign _news_href = '/news/' %}
       {% endif %}
       <h2>
         <a href="{{ _news_href | relative_url }}" style="color: inherit">{{ _news_label }}</a>
@@ -57,7 +69,11 @@ layout: default
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      {% assign _posts_label = page.lang == 'pt-BR' ? 'últimas postagens' : 'latest posts' %}
+      {% if page.lang == 'pt-BR' %}
+        {% assign _posts_label = 'últimas postagens' %}
+      {% else %}
+        {% assign _posts_label = 'latest posts' %}
+      {% endif %}
       <h2>
         <a href="{{ '/blog/' | relative_url }}" style="color: inherit">{{ _posts_label }}</a>
       </h2>
@@ -68,10 +84,10 @@ layout: default
     {% if page.selected_papers %}
       {% if page.lang == 'pt-BR' %}
         {% assign _pubs_label = 'publicações selecionadas' %}
-        {% assign _pubs_href  = '/pt/publications/' %}
+        {% assign _pubs_href = '/pt/publications/' %}
       {% else %}
         {% assign _pubs_label = 'selected publications' %}
-        {% assign _pubs_href  = '/publications/' %}
+        {% assign _pubs_href = '/publications/' %}
       {% endif %}
       <h2>
         <a href="{{ _pubs_href | relative_url }}" style="color: inherit">{{ _pubs_label }}</a>

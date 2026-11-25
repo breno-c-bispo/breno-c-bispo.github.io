@@ -25,6 +25,17 @@ nav_order: 2
     </div>
   </div>
 
+  <div class="filter-row mb-2">
+    <span class="filter-label">Topic</span>
+    <div class="btn-group flex-wrap" role="group" aria-label="Filter by topic">
+      <button class="btn btn-sm filter-btn active" data-filter="topic" data-value="all">All</button>
+      <button class="btn btn-sm filter-btn" data-filter="topic" data-value="higher-order">Higher-order SP</button>
+      <button class="btn btn-sm filter-btn" data-filter="topic" data-value="brain">Brain networks</button>
+      <button class="btn btn-sm filter-btn" data-filter="topic" data-value="dsp">Signal processing</button>
+      <button class="btn btn-sm filter-btn" data-filter="topic" data-value="biomedical">Biomedical engineering</button>
+    </div>
+  </div>
+
   <div class="filter-row mb-2" id="type-filter-group">
     <span class="filter-label">Type</span>
     <div class="btn-group flex-wrap" role="group" aria-label="Filter by type">
@@ -64,6 +75,14 @@ nav_order: 2
   var activeCategory = 'paper'; /* "Papers" is the default active category */
   var activeType     = 'all';
   var activeYear     = 'all';
+  var activeTopic    = 'all';
+
+  function getTopics(row) {
+    return (row.getAttribute('data-topics') || '')
+      .split(',')
+      .map(function (t) { return t.trim(); })
+      .filter(Boolean);
+  }
 
   function getPubCategory(row) {
     var pt = (row.getAttribute('data-pubtype') || '').toLowerCase().trim();
@@ -95,8 +114,9 @@ nav_order: 2
       var catOk  = activeCategory === 'all' || cat  === activeCategory;
       var typeOk = activeType     === 'all' || cat  !== 'paper' || type === activeType;
       var yearOk = activeYear     === 'all' || year === activeYear;
+      var topicOk = activeTopic   === 'all' || getTopics(row).indexOf(activeTopic) !== -1;
 
-      li.style.display = (catOk && typeOk && yearOk) ? '' : 'none';
+      li.style.display = (catOk && typeOk && yearOk && topicOk) ? '' : 'none';
     });
 
     /* Hide year-section headers whose <ol> has no visible entries */
@@ -138,6 +158,8 @@ nav_order: 2
           activeType = value;
         } else if (filterType === 'year') {
           activeYear = value;
+        } else if (filterType === 'topic') {
+          activeTopic = value;
         }
 
         applyFilters();

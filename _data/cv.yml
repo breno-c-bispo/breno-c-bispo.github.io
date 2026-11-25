@@ -1,13 +1,16 @@
 cv:
   name: Breno Cordeiro Bispo
-  label: Ph.D. in Electrical Engineering
+  label: Postdoctoral Researcher (FAPESP) · CISM / FMUSP · LENS Lab
   email: breno.bispo@ufpe.br
-  location: Recife, PE, Brazil
+  location: São Paulo, SP, Brazil
   image: ""
   summary: >
-    Ph.D. in Electrical Engineering at UFPE (Brazil). Research focuses on Topological Signal
+    FAPESP postdoctoral researcher at the Center for Research and Innovation in Mental Health
+    ([CISM](https://cism.org.br/)), Faculty of Medicine, University of São Paulo
+    ([FMUSP](https://www.fm.usp.br/)), working with the [LENS Lab](https://lens.fm.usp.br/).
+    Ph.D. in Electrical Engineering from UFPE (Brazil). Research focuses on Topological Signal
     Processing, Graph/Hypergraph Signal Processing, Machine Learning, and their applications in
-    brain network analysis and neuroscience.
+    brain network analysis, neuroscience and developmental psychiatry.
 
   social_networks:
     - network: Google-Scholar
@@ -20,7 +23,6 @@ cv:
       username: breno-c-bispo
     - network: ORCID
       username: 0000-0002-6927-3854
-    
 
   sections:
     Education:
@@ -81,6 +83,17 @@ cv:
           - "Advisor: Prof. Marco A. B. Rodrigues"
 
     Experience:
+      - company: CISM & LENS Lab — Faculty of Medicine, University of São Paulo (FMUSP)
+        position: Postdoctoral Researcher (FAPESP fellowship)
+        location: São Paulo, Brazil
+        start_date: 2026-11
+        end_date: present
+        highlights:
+          - "Project: *From Genetic Architecture to Brain Organization: Multimodal Characterization of Transdiagnostic Psychopathological Vulnerability* (FAPESP 2026/24467-5)"
+          - "Supervisor: Prof. Arthur Caye (FMUSP)"
+          - "Center for Research and Innovation in Mental Health ([CISM](https://cism.org.br/)) and [LENS Lab](https://lens.fm.usp.br/) — Longitudinal Epidemiology and Neurodevelopmental Science Lab"
+          - "Linked to the FAPESP [Projeto Geração](https://fapesp.br/projetogeracao) research grant 2024/19572-9"
+
       - company: Universitas Mercatorum & Univ. of Amsterdam
         position: Visiting Researcher (TSP-ARK Project)
         location: Rome, Italy / Amsterdam, Netherlands
@@ -113,6 +126,10 @@ cv:
           - "Electric Circuits (2014); Digital Electronics (2016–17); Analog Electronics (2017)"
 
     Awards:
+      - title: FAPESP Postdoctoral Fellowship
+        date: 2026
+        awarder: São Paulo Research Foundation (FAPESP) — Process 2026/24467-5
+        summary: "*From Genetic Architecture to Brain Organization: Multimodal Characterization of Transdiagnostic Psychopathological Vulnerability* (Nov. 2026 – Oct. 2029). Supervisor: Prof. Arthur Caye, Faculty of Medicine, University of São Paulo. Fellowship linked to the [Projeto Geração](https://fapesp.br/projetogeracao) grant 2024/19572-9."
 
       - title: CAPES Doctoral Internship Abroad (PDSE)
         date: 2023
@@ -185,6 +202,17 @@ cv:
         summary: "Intermediate (TELC B1)"
 
     Projects:
+      - name: "Identifying Children and Adolescents at Risk for Mental Disorders: A Transdiagnostic Predictive Model for Developmental Psychiatry"
+        url: https://fapesp.br/projetogeracao
+        summary: "Research project funded by FAPESP's Young Investigators programme (PNGP — Projeto Geração) and carried out at the LENS Lab, Faculty of Medicine, University of São Paulo. Original title: *Identificação de crianças e adolescentes em risco para transtornos mentais: um modelo preditivo transdiagnóstico para a Psiquiatria do Desenvolvimento*."
+        start_date: 2026
+        end_date: 2031
+        highlights:
+          - "PI: Prof. Arthur Caye (FMUSP)"
+          - "FAPESP process 2024/19572-9 (Feb. 2026 – Jan. 2031)"
+          - "Role: postdoctoral researcher (FAPESP fellowship 2026/24467-5)"
+          - "Status: ongoing"
+
       - name: Graph Signal Processing — Theoretical Contributions and Application Scenarios
         summary: "Develops tools that generalise classical signal processing concepts to signals defined over graph-structured domains — including sensor networks, brain activity, and digital images — in a cooperative network involving Brazilian and international universities."
         start_date: 2024
@@ -192,7 +220,7 @@ cv:
         highlights:
           - "PI: Prof. Juliano B. Lima (UFPE)"
           - "Status: ongoing"
-      
+
       - name: "TSP-ARK — Topological Signal Processing: Applications in bRain and Knowledge Networks"
         summary: "Develops novel topological signal processing frameworks — leveraging Hodge Laplacians, cross-Laplacian operators, and cell multicomplex representations — with applications to brain network analysis and knowledge graphs."
         start_date: 2024

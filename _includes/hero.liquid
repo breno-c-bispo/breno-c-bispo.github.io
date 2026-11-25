@@ -1,0 +1,138 @@
+<section class="hero">
+  <div class="hero-text">
+    {% if page.hero.eyebrow %}
+      <p class="hero-eyebrow">{{ page.hero.eyebrow }}</p>
+    {% endif %}
+    <h1 class="hero-name">
+      {{ site.first_name }}
+      {% if site.middle_name %}{{ site.middle_name }} {% endif %}
+      {{- site.last_name }}
+    </h1>
+    {% if page.hero.tagline %}
+      <p class="hero-tagline">{{ page.hero.tagline }}</p>
+    {% endif %}
+    {% if page.hero.affiliation %}
+      <p class="hero-affiliation">{{ page.hero.affiliation }}</p>
+    {% endif %}
+    {% if page.hero.links %}
+      <div class="hero-actions">
+        {% for link in page.hero.links %}
+          {% if link.url contains '://' %}
+            {% assign _hero_href = link.url %}
+          {% else %}
+            {% assign _hero_href = link.url | relative_url %}
+          {% endif %}
+          <a
+            class="hero-btn{% if forloop.first %} hero-btn-primary{% endif %}"
+            href="{{ _hero_href }}"
+            {% if link.url contains '://' %}
+              target="_blank" rel="noopener"
+            {% endif %}
+          >
+            {%- if link.icon %}<i class="{{ link.icon }}" aria-hidden="true"></i>{% endif %}
+            {{ link.label -}}
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+
+  {% if page.lang == 'pt-BR' %}
+    {% assign _hodge_labels = 'gradiente,divergência,rotacional,harmônico,todos' | split: ',' %}
+    {% assign _hodge_group = 'Componentes de Hodge' %}
+    {% assign _hodge_aria = 'Animação: sinal nas arestas de um complexo celular dentro de um cérebro, decomposto em componentes gradiente, rotacional e harmônico.' %}
+    {% capture _hodge_caps %}
+      data-caption-grad="Gradiente · B₁ᵀφ — fluxo induzido por potenciais nos nós"
+      data-caption-div="Divergência · B₁f — fontes (+) e sumidouros (−) de informação no cérebro"
+      data-caption-curl="Rotacional · B₂ψ — circulação em triângulos e polígonos"
+      data-caption-harm="Harmônico · h — fluxo ao redor dos buracos do complexo"
+      data-caption-all="f = B₁ᵀφ + B₂ψ + h — decomposição de Hodge do sinal nas arestas"
+    {% endcapture %}
+  {% else %}
+    {% assign _hodge_labels = 'gradient,divergence,curl,harmonic,all' | split: ',' %}
+    {% assign _hodge_group = 'Hodge components' %}
+    {% assign _hodge_aria = 'Animation: an edge signal on a cell complex inside a brain, decomposed into gradient, curl and harmonic components.' %}
+    {% capture _hodge_caps %}
+      data-caption-grad="Gradient · B₁ᵀφ — flow driven by node potentials"
+      data-caption-div="Divergence · B₁f — sources (+) and sinks (−) of information in the brain"
+      data-caption-curl="Curl · B₂ψ — circulation around triangles and polygons"
+      data-caption-harm="Harmonic · h — flow around the holes of the complex"
+      data-caption-all="f = B₁ᵀφ + B₂ψ + h — Hodge decomposition of an edge signal"
+    {% endcapture %}
+  {% endif %}
+
+  <!-- Hodge decomposition of an edge flow on a brain cell complex (assets/js/hero-complex.js) -->
+  <figure class="hero-art" data-hero-complex {{ _hodge_caps | strip_newlines }}>
+    <canvas class="hero-canvas" role="img" aria-label="{{ _hodge_aria }}"></canvas>
+    <figcaption class="hodge-legend">
+      <div class="hodge-modes" role="group" aria-label="{{ _hodge_group }}">
+        {% assign _hodge_modes = 'grad,div,curl,harm,all' | split: ',' %}
+        {% for m in _hodge_modes %}
+          <button type="button" data-mode="{{ m }}" aria-pressed="false">{{ _hodge_labels[forloop.index0] }}</button>
+        {% endfor %}
+      </div>
+      <p class="hodge-caption" data-hodge-caption></p>
+    </figcaption>
+
+    <!-- Static fallback when JavaScript is unavailable -->
+    <svg class="hero-fallback" viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g class="cells">
+        <polygon class="cell c1" points="40,60 110,30 95,110" />
+        <polygon class="cell c2" points="110,30 175,70 95,110" />
+        <polygon class="cell c3" points="175,70 255,120 160,150" />
+        <polygon class="cell c4" points="160,150 215,200 125,195" />
+        <polygon class="cell c5" points="245,40 300,75 255,120" />
+        <polygon class="cell c6" points="255,120 295,190 215,200" />
+      </g>
+      <g class="edges">
+        <line x1="40" y1="60" x2="110" y2="30" />
+        <line x1="110" y1="30" x2="95" y2="110" />
+        <line x1="40" y1="60" x2="95" y2="110" />
+        <line x1="110" y1="30" x2="175" y2="70" />
+        <line x1="175" y1="70" x2="95" y2="110" />
+        <line x1="175" y1="70" x2="255" y2="120" />
+        <line x1="255" y1="120" x2="160" y2="150" />
+        <line x1="175" y1="70" x2="160" y2="150" />
+        <line x1="160" y1="150" x2="215" y2="200" />
+        <line x1="215" y1="200" x2="125" y2="195" />
+        <line x1="160" y1="150" x2="125" y2="195" />
+        <line x1="245" y1="40" x2="300" y2="75" />
+        <line x1="300" y1="75" x2="255" y2="120" />
+        <line x1="245" y1="40" x2="255" y2="120" />
+        <line x1="255" y1="120" x2="295" y2="190" />
+        <line x1="295" y1="190" x2="215" y2="200" />
+        <line x1="255" y1="120" x2="215" y2="200" />
+        <line x1="175" y1="70" x2="245" y2="40" />
+        <line x1="40" y1="60" x2="45" y2="165" />
+        <line x1="95" y1="110" x2="160" y2="150" />
+      </g>
+      <g class="cycle">
+        <line x1="95" y1="110" x2="45" y2="165" />
+        <line x1="45" y1="165" x2="125" y2="195" />
+        <line x1="125" y1="195" x2="95" y2="110" />
+      </g>
+      <g class="flows">
+        <line class="flow f1" x1="110" y1="30" x2="175" y2="70" />
+        <line class="flow f2" x1="175" y1="70" x2="255" y2="120" />
+        <line class="flow f3" x1="160" y1="150" x2="215" y2="200" />
+        <line class="flow f4" x1="45" y1="165" x2="125" y2="195" />
+        <line class="flow f5" x1="300" y1="75" x2="255" y2="120" />
+      </g>
+      <g class="nodes">
+        <circle cx="40" cy="60" r="4.5" />
+        <circle cx="110" cy="30" r="4.5" />
+        <circle cx="95" cy="110" r="5.5" />
+        <circle cx="175" cy="70" r="5.5" />
+        <circle cx="160" cy="150" r="5" />
+        <circle cx="245" cy="40" r="4" />
+        <circle cx="255" cy="120" r="5.5" />
+        <circle cx="215" cy="200" r="4.5" />
+        <circle cx="125" cy="195" r="4.5" />
+        <circle cx="45" cy="165" r="4" />
+        <circle cx="295" cy="190" r="4" />
+        <circle cx="300" cy="75" r="4" />
+      </g>
+    </svg>
+  </figure>
+  <script defer src="{{ '/assets/js/hero-complex.js' | relative_url | bust_file_cache }}"></script>
+</section>

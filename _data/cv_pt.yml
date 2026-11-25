@@ -1,13 +1,17 @@
 cv:
   name: Breno Cordeiro Bispo
-  label: Doutor em Engenharia Elétrica
+  label: Pesquisador de Pós-Doutorado (FAPESP) · CISM / FMUSP · LENS Lab
   email: breno.bispo@ufpe.br
-  location: Recife, PE, Brasil
+  location: São Paulo, SP, Brasil
   image: ""
   summary: >
+    Pesquisador de pós-doutorado com bolsa FAPESP no Centro de Pesquisa e Inovação em Saúde
+    Mental ([CISM](https://cism.org.br/)) da Faculdade de Medicina da Universidade de São Paulo
+    ([FMUSP](https://www.fm.usp.br/)), atuando no [LENS Lab](https://lens.fm.usp.br/).
     Doutor em Engenharia Elétrica pela UFPE (Brasil). Pesquisa focada em Processamento
     Topológico de Sinais, Processamento de Sinais em Grafos/Hipergrafo, Aprendizado de
-    Máquina e suas aplicações em análise de redes cerebrais e neurociência.
+    Máquina e suas aplicações em análise de redes cerebrais, neurociência e psiquiatria do
+    desenvolvimento.
 
   social_networks:
     - network: Google-Scholar
@@ -80,6 +84,17 @@ cv:
           - "Orientador: Prof. Marco A. B. Rodrigues"
 
     Experience:
+      - company: CISM & LENS Lab — Faculdade de Medicina da Universidade de São Paulo (FMUSP)
+        position: Pesquisador de Pós-Doutorado (bolsa FAPESP)
+        location: São Paulo, Brasil
+        start_date: 2026-11
+        end_date: atual
+        highlights:
+          - "Projeto: *Da Arquitetura Genética à Organização Cerebral: Caracterização Multimodal da Vulnerabilidade Psicopatológica Transdiagnóstica* (FAPESP 2026/24467-5)"
+          - "Supervisor: Prof. Arthur Caye (FMUSP)"
+          - "Centro de Pesquisa e Inovação em Saúde Mental ([CISM](https://cism.org.br/)) e [LENS Lab](https://lens.fm.usp.br/) — Longitudinal Epidemiology and Neurodevelopmental Science Lab"
+          - "Vinculado ao auxílio FAPESP [Projeto Geração](https://fapesp.br/projetogeracao) 2024/19572-9"
+
       - company: Universitas Mercatorum & Univ. de Amsterdã
         position: Pesquisador Visitante (Projeto TSP-ARK)
         location: Roma, Itália / Amsterdã, Países Baixos
@@ -112,6 +127,11 @@ cv:
           - "Circuitos Elétricos (2014); Eletrônica Digital (2016–17); Eletrônica Analógica (2017)"
 
     Awards:
+      - title: Bolsa de Pós-Doutorado FAPESP
+        date: 2026
+        awarder: Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP) — Processo 2026/24467-5
+        summary: "*Da Arquitetura Genética à Organização Cerebral: Caracterização Multimodal da Vulnerabilidade Psicopatológica Transdiagnóstica* (nov. 2026 – out. 2029). Supervisor: Prof. Arthur Caye, Faculdade de Medicina da USP. Bolsa vinculada ao auxílio [Projeto Geração](https://fapesp.br/projetogeracao) 2024/19572-9."
+
       - title: Bolsa de Estágio Doutoral no Exterior (PDSE — CAPES)
         date: 2023
         awarder: CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior)
@@ -183,6 +203,17 @@ cv:
         summary: "Intermediário (TELC B1)"
 
     Projects:
+      - name: "Identificação de Crianças e Adolescentes em Risco para Transtornos Mentais: Um Modelo Preditivo Transdiagnóstico para a Psiquiatria do Desenvolvimento"
+        url: https://fapesp.br/projetogeracao
+        summary: "Projeto de pesquisa financiado pelo Programa Nova Geração de Pesquisadores da FAPESP (PNGP — Projeto Geração) e desenvolvido no LENS Lab, Faculdade de Medicina da Universidade de São Paulo."
+        start_date: 2026
+        end_date: 2031
+        highlights:
+          - "Coordenador: Prof. Arthur Caye (FMUSP)"
+          - "Processo FAPESP 2024/19572-9 (fev. 2026 – jan. 2031)"
+          - "Função: pesquisador de pós-doutorado (bolsa FAPESP 2026/24467-5)"
+          - "Status: em andamento"
+
       - name: Processamento de Sinais em Grafos — Contribuições Teóricas e Cenários de Aplicação
         summary: "Desenvolve ferramentas que generalizam conceitos clássicos de processamento de sinais para domínios estruturados em grafos — incluindo redes de sensores, atividade cerebral e imagens digitais — em rede cooperativa envolvendo universidades brasileiras e internacionais."
         start_date: 2024

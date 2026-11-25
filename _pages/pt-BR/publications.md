@@ -25,6 +25,17 @@ nav: false
     </div>
   </div>
 
+  <div class="filter-row mb-2">
+    <span class="filter-label">Tema</span>
+    <div class="btn-group flex-wrap" role="group" aria-label="Filtrar por tema">
+      <button class="btn btn-sm filter-btn active" data-filter="topic" data-value="all">Todos</button>
+      <button class="btn btn-sm filter-btn" data-filter="topic" data-value="higher-order">Sinais de ordem superior</button>
+      <button class="btn btn-sm filter-btn" data-filter="topic" data-value="brain">Redes cerebrais</button>
+      <button class="btn btn-sm filter-btn" data-filter="topic" data-value="dsp">Processamento de sinais</button>
+      <button class="btn btn-sm filter-btn" data-filter="topic" data-value="biomedical">Engenharia biomédica</button>
+    </div>
+  </div>
+
   <div class="filter-row mb-2" id="type-filter-group">
     <span class="filter-label">Tipo</span>
     <div class="btn-group flex-wrap" role="group" aria-label="Filtrar por tipo">
@@ -64,6 +75,14 @@ nav: false
   var activeCategory = 'paper';
   var activeType     = 'all';
   var activeYear     = 'all';
+  var activeTopic    = 'all';
+
+  function getTopics(row) {
+    return (row.getAttribute('data-topics') || '')
+      .split(',')
+      .map(function (t) { return t.trim(); })
+      .filter(Boolean);
+  }
 
   function getPubCategory(row) {
     var pt = (row.getAttribute('data-pubtype') || '').toLowerCase().trim();
@@ -94,8 +113,9 @@ nav: false
       var catOk  = activeCategory === 'all' || cat  === activeCategory;
       var typeOk = activeType     === 'all' || cat  !== 'paper' || type === activeType;
       var yearOk = activeYear     === 'all' || year === activeYear;
+      var topicOk = activeTopic   === 'all' || getTopics(row).indexOf(activeTopic) !== -1;
 
-      li.style.display = (catOk && typeOk && yearOk) ? '' : 'none';
+      li.style.display = (catOk && typeOk && yearOk && topicOk) ? '' : 'none';
     });
 
     document.querySelectorAll('.publications h2').forEach(function (h2) {
@@ -134,6 +154,8 @@ nav: false
           activeType = value;
         } else if (filterType === 'year') {
           activeYear = value;
+        } else if (filterType === 'topic') {
+          activeTopic = value;
         }
 
         applyFilters();

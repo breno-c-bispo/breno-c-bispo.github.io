@@ -41,45 +41,45 @@ layout: default
     <div class="cv">
       {% comment %} ── Language labels ── {% endcomment %}
       {% if page.lang == 'pt-BR' %}
-        {% assign lbl_contact      = 'Informações de Contato' %}
-        {% assign lbl_name         = 'Nome' %}
-        {% assign lbl_title        = 'Título Profissional' %}
-        {% assign lbl_email        = 'E-mail' %}
-        {% assign lbl_phone        = 'Telefone' %}
-        {% assign lbl_location     = 'Localização' %}
-        {% assign lbl_website      = 'Website' %}
-        {% assign lbl_links        = 'Links' %}
-        {% assign lbl_summary      = 'Resumo Profissional' %}
-        {% assign lbl_experience   = 'Experiência' %}
-        {% assign lbl_education    = 'Educação' %}
-        {% assign lbl_awards       = 'Prêmios e Bolsas' %}
+        {% assign lbl_contact = 'Informações de Contato' %}
+        {% assign lbl_name = 'Nome' %}
+        {% assign lbl_title = 'Título Profissional' %}
+        {% assign lbl_email = 'E-mail' %}
+        {% assign lbl_phone = 'Telefone' %}
+        {% assign lbl_location = 'Localização' %}
+        {% assign lbl_website = 'Website' %}
+        {% assign lbl_links = 'Links' %}
+        {% assign lbl_summary = 'Resumo Profissional' %}
+        {% assign lbl_experience = 'Experiência' %}
+        {% assign lbl_education = 'Educação' %}
+        {% assign lbl_awards = 'Prêmios e Bolsas' %}
         {% assign lbl_publications = 'Publicações' %}
-        {% assign lbl_skills       = 'Habilidades' %}
-        {% assign lbl_languages    = 'Idiomas' %}
-        {% assign lbl_interests    = 'Interesses' %}
+        {% assign lbl_skills = 'Habilidades' %}
+        {% assign lbl_languages = 'Idiomas' %}
+        {% assign lbl_interests = 'Interesses' %}
         {% assign lbl_certificates = 'Certificados' %}
-        {% assign lbl_projects     = 'Projetos' %}
-        {% assign lbl_references   = 'Referências' %}
+        {% assign lbl_projects = 'Projetos' %}
+        {% assign lbl_references = 'Referências' %}
       {% else %}
-        {% assign lbl_contact      = 'Contact Information' %}
-        {% assign lbl_name         = 'Name' %}
-        {% assign lbl_title        = 'Professional Title' %}
-        {% assign lbl_email        = 'Email' %}
-        {% assign lbl_phone        = 'Phone' %}
-        {% assign lbl_location     = 'Location' %}
-        {% assign lbl_website      = 'Website' %}
-        {% assign lbl_links        = 'Links' %}
-        {% assign lbl_summary      = 'Professional Summary' %}
-        {% assign lbl_experience   = 'Experience' %}
-        {% assign lbl_education    = 'Education' %}
-        {% assign lbl_awards       = 'Awards' %}
+        {% assign lbl_contact = 'Contact Information' %}
+        {% assign lbl_name = 'Name' %}
+        {% assign lbl_title = 'Professional Title' %}
+        {% assign lbl_email = 'Email' %}
+        {% assign lbl_phone = 'Phone' %}
+        {% assign lbl_location = 'Location' %}
+        {% assign lbl_website = 'Website' %}
+        {% assign lbl_links = 'Links' %}
+        {% assign lbl_summary = 'Professional Summary' %}
+        {% assign lbl_experience = 'Experience' %}
+        {% assign lbl_education = 'Education' %}
+        {% assign lbl_awards = 'Awards and Grants' %}
         {% assign lbl_publications = 'Publications' %}
-        {% assign lbl_skills       = 'Skills' %}
-        {% assign lbl_languages    = 'Languages' %}
-        {% assign lbl_interests    = 'Interests' %}
+        {% assign lbl_skills = 'Skills' %}
+        {% assign lbl_languages = 'Languages' %}
+        {% assign lbl_interests = 'Interests' %}
         {% assign lbl_certificates = 'Certificates' %}
-        {% assign lbl_projects     = 'Projects' %}
-        {% assign lbl_references   = 'References' %}
+        {% assign lbl_projects = 'Projects' %}
+        {% assign lbl_references = 'References' %}
       {% endif %}
 
       {% comment %} Determine which CV format to render {% endcomment %}
@@ -114,31 +114,41 @@ layout: default
             <table class="table table-cv table-sm table-borderless">
               {% if cv.name %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>{{ lbl_name }}</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ lbl_name }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">{{ cv.name }}</td>
                 </tr>
               {% endif %}
               {% if cv.label %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>{{ lbl_title }}</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ lbl_title }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">{{ cv.label }}</td>
                 </tr>
               {% endif %}
               {% if cv.email %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>{{ lbl_email }}</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ lbl_email }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">{{ cv.email }}</td>
                 </tr>
               {% endif %}
               {% if cv.phone %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>{{ lbl_phone }}</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ lbl_phone }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">{{ cv.phone }}</td>
                 </tr>
               {% endif %}
               {% if cv.address %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>{{ lbl_location }}</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ lbl_location }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">
                     {% if cv.address.street %}{{ cv.address.street }}, {% endif %}
                     {% if cv.address.city %}{{ cv.address.city }}, {% endif %}
@@ -149,7 +159,9 @@ layout: default
               {% endif %}
               {% if cv.website %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>{{ lbl_website }}</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ lbl_website }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">
                     <a href="{{ cv.website }}" target="_blank">{{ cv.website }}</a>
                   </td>
@@ -157,7 +169,9 @@ layout: default
               {% endif %}
               {% if cv.social_networks %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>{{ lbl_links }}</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ lbl_links }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">
                     {% for sn in cv.social_networks %}
                       {% assign network_lc = sn.network | downcase %}
@@ -186,8 +200,13 @@ layout: default
                         {% assign icon_class = 'fa-solid fa-link' %}
                         {% assign profile_url = sn.username %}
                       {% endif %}
-                      <a href="{{ profile_url }}" target="_blank" rel="noopener noreferrer"
-                         title="{{ sn.network }}" style="margin-right: 0.6rem; font-size: 1.2rem;">
+                      <a
+                        href="{{ profile_url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="{{ sn.network }}"
+                        style="margin-right: 0.6rem; font-size: 1.2rem;"
+                      >
                         <i class="{{ icon_class }}"></i>
                       </a>
                     {% endfor %}
@@ -235,16 +254,26 @@ layout: default
 
           {% comment %} Map section titles to language-aware labels {% endcomment %}
           {% case section_title %}
-            {% when 'Education' %}{% assign _section_lbl = lbl_education %}
-            {% when 'Awards', 'Honors and Awards' %}{% assign _section_lbl = lbl_awards %}
-            {% when 'Publications' %}{% assign _section_lbl = lbl_publications %}
-            {% when 'Skills' %}{% assign _section_lbl = lbl_skills %}
-            {% when 'Languages' %}{% assign _section_lbl = lbl_languages %}
-            {% when 'Interests', 'Academic Interests' %}{% assign _section_lbl = lbl_interests %}
-            {% when 'Certificates' %}{% assign _section_lbl = lbl_certificates %}
-            {% when 'Projects', 'Open Source Projects' %}{% assign _section_lbl = lbl_projects %}
-            {% when 'References' %}{% assign _section_lbl = lbl_references %}
-            {% else %}{% assign _section_lbl = section_title %}
+            {% when 'Education' -%}
+              {%- assign _section_lbl = lbl_education %}
+            {% when 'Awards', 'Honors and Awards' -%}
+              {%- assign _section_lbl = lbl_awards %}
+            {% when 'Publications' -%}
+              {%- assign _section_lbl = lbl_publications %}
+            {% when 'Skills' -%}
+              {%- assign _section_lbl = lbl_skills %}
+            {% when 'Languages' -%}
+              {%- assign _section_lbl = lbl_languages %}
+            {% when 'Interests', 'Academic Interests' -%}
+              {%- assign _section_lbl = lbl_interests %}
+            {% when 'Certificates' -%}
+              {%- assign _section_lbl = lbl_certificates %}
+            {% when 'Projects', 'Open Source Projects' -%}
+              {%- assign _section_lbl = lbl_projects %}
+            {% when 'References' -%}
+              {%- assign _section_lbl = lbl_references %}
+            {% else -%}
+              {%- assign _section_lbl = section_title %}
           {% endcase %}
 
           <a class="anchor" id="{{ section_title | slugify }}"></a>
@@ -307,31 +336,41 @@ layout: default
             <table class="table table-cv table-sm table-borderless">
               {% if basics.name %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>{{ lbl_name }}</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ lbl_name }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">{{ basics.name }}</td>
                 </tr>
               {% endif %}
               {% if basics.label %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>{{ lbl_title }}</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ lbl_title }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">{{ basics.label }}</td>
                 </tr>
               {% endif %}
               {% if basics.email %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>{{ lbl_email }}</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ lbl_email }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">{{ basics.email }}</td>
                 </tr>
               {% endif %}
               {% if basics.phone %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>{{ lbl_phone }}</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ lbl_phone }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">{{ basics.phone }}</td>
                 </tr>
               {% endif %}
               {% if basics.location %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>{{ lbl_location }}</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ lbl_location }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">
                     {% if basics.location.address %}{{ basics.location.address }}, {% endif %}
                     {% if basics.location.city %}{{ basics.location.city }}, {% endif %}
@@ -342,7 +381,9 @@ layout: default
               {% endif %}
               {% if basics.url %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>{{ lbl_website }}</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ lbl_website }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">
                     <a href="{{ basics.url }}" target="_blank">{{ basics.url }}</a>
                   </td>
