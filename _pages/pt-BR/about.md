@@ -64,7 +64,7 @@ latest_posts:
   limit: 3
 ---
 
-Sou pesquisador de pós-doutorado no Centro de Pesquisa e Inovação em Saúde Mental ([CISM](https://cism.org.br/)) da Faculdade de Medicina da Universidade de São Paulo ([FMUSP](https://www.fm.usp.br/)), onde atuo no [LENS Lab](https://lens.fm.usp.br/) — Longitudinal Epidemiology and Neurodevelopmental Science Lab. Sou supervisionado pelo [Prof. Arthur Caye](https://arthurcaye.com/) (FMUSP) e pelo [Prof. Nuno Sousa](https://scholar.google.com/citations?hl=pt-PT&user=hpo15cwAAAAJ&view_op=list_works&sortby=pubdate) (UniMAX).
+Sou pesquisador de pós-doutorado no Centro de Pesquisa e Inovação em Saúde Mental ([CISM](https://cism.org.br/)) da Faculdade de Medicina da Universidade de São Paulo ([FMUSP](https://www.fm.usp.br/)), onde atuo no [LENS Lab](https://lens.fm.usp.br/) — Longitudinal Epidemiology and Neurodevelopmental Science Lab. Sou supervisionado pelo [Prof. Arthur Caye](https://arthurcaye.com/) (FMUSP) e pelo [Prof. Nuno Sousa](https://scholar.google.com/citations?hl=pt-PT&user=hpo15cwAAAAJ&view_op=list_works&sortby=pubdate) ([UniMAX](https://unimax.edu.br/)).
 
 Concluí meu Doutorado em Engenharia Elétrica (2026) na [Universidade Federal de Pernambuco (UFPE)](https://www.ufpe.br/), Brasil, com orientação do [Prof. Juliano B. Lima](https://scholar.google.com/citations?user=qIgb2EUAAAAJ&hl=en) (UFPE) e do [Prof. Fernando A. N. Santos](https://scholar.google.com/citations?user=UUCiHTAAAAAJ&hl=en) (Universidade de Amsterdã). Minha tese de doutorado tem o título _"Processamento de Sinais de Alta Ordem e Suas Aplicações na Análise de Redes Cerebrais"_.
 
