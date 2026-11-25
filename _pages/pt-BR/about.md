@@ -48,7 +48,7 @@ profile:
   image_circular: false
   more_info: >
     <p>São Paulo, SP, Brasil</p>
-    <p><a href="mailto:breno.bispo@ufpe.br">breno.bispo@ufpe.br</a></p>
+    <p><a href="mailto:brenoc94@gmail.com">brenoc94@gmail.com</a></p>
 
 selected_papers: true
 social: true
