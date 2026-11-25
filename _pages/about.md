@@ -63,7 +63,7 @@ latest_posts:
   limit: 3
 ---
 
-I am a postdoctoral researcher at the Center for Research and Innovation in Mental Health ([CISM](https://cism.org.br/)), Faculty of Medicine, University of São Paulo ([FMUSP](https://www.fm.usp.br/)), where I work with the [LENS Lab](https://lens.fm.usp.br/) — Longitudinal Epidemiology and Neurodevelopmental Science Lab.
+I am a postdoctoral researcher at the Center for Research and Innovation in Mental Health ([CISM](https://cism.org.br/)), Faculty of Medicine, University of São Paulo ([FMUSP](https://www.fm.usp.br/)), where I work with the [LENS Lab](https://lens.fm.usp.br/) — Longitudinal Epidemiology and Neurodevelopmental Science Lab. I am supervised by [Prof. Arthur Caye](https://arthurcaye.com/) (FMUSP) and [Prof. Nuno Sousa](https://scholar.google.com/citations?hl=pt-PT&user=hpo15cwAAAAJ&view_op=list_works&sortby=pubdate) (UniMAX).
 
 I received my Ph.D. in Electrical Engineering (2026) from the [Federal University of Pernambuco (UFPE)](https://www.ufpe.br/), Brazil, advised by [Prof. Juliano B. Lima](https://scholar.google.com/citations?user=qIgb2EUAAAAJ&hl=en) (UFPE) and [Prof. Fernando A. N. Santos](https://scholar.google.com/citations?user=UUCiHTAAAAAJ&hl=en) (University of Amsterdam). My doctoral thesis is titled _"Higher-Order Signal Processing and Its Applications in Brain Network Analysis"_.
 
