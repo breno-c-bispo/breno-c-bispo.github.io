@@ -6,4 +6,4 @@ related_posts: false
 lang: pt-BR
 ---
 
-Palestra sobre *"Inferência de Redes"* ministrada na **Escola de Pesquisa CIMPA** — A Matemática dos Sistemas Complexos: Teoria e Aplicações, Recife, Brasil.
+Palestra sobre _"Inferência de Redes"_ ministrada na **Escola de Pesquisa CIMPA** — A Matemática dos Sistemas Complexos: Teoria e Aplicações, Recife, Brasil.

@@ -6,4 +6,4 @@ related_posts: false
 lang: en
 ---
 
-Paper submitted to **IEEE Journal of Biomedical and Health Informatics**: *"Multimodal Higher-Order Brain Networks: A Topological Signal Processing Perspective"* — [preprint on arXiv](https://arxiv.org/abs/2603.29903).
+Paper submitted to **IEEE Journal of Biomedical and Health Informatics**: _"Multimodal Higher-Order Brain Networks: A Topological Signal Processing Perspective"_ — [preprint on arXiv](https://arxiv.org/abs/2603.29903).

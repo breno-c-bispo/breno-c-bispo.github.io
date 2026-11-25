@@ -6,4 +6,4 @@ related_posts: false
 lang: pt-BR
 ---
 
-Artigo submetido ao **IEEE Journal of Biomedical and Health Informatics**: *"Redes Cerebrais de Alta Ordem Multimodais: Uma Perspectiva de Processamento Topológico de Sinais"* — [preprint no arXiv](https://arxiv.org/abs/2603.29903).
+Artigo submetido ao **IEEE Journal of Biomedical and Health Informatics**: _"Redes Cerebrais de Alta Ordem Multimodais: Uma Perspectiva de Processamento Topológico de Sinais"_ — [preprint no arXiv](https://arxiv.org/abs/2603.29903).

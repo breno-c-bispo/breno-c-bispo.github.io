@@ -6,4 +6,4 @@ related_posts: false
 lang: en
 ---
 
-Gave a talk on *"Network Inference"* at the **CIMPA Research School** — The Mathematics of Complex Systems: Theory and Applications, Recife, Brazil.
+Gave a talk on _"Network Inference"_ at the **CIMPA Research School** — The Mathematics of Complex Systems: Theory and Applications, Recife, Brazil.

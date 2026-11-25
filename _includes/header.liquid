@@ -2,7 +2,6 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-
       {% comment %} ── Language switcher (top-left, always visible) ── {% endcomment %}
       {% assign is_pt_page = false %}
       {% if page.lang == 'pt-BR' %}{% assign is_pt_page = true %}{% endif %}
@@ -14,27 +13,31 @@
         {% assign _pt_href = page.permalink %}
       {% else %}
         {% assign _en_href = page.permalink %}
-        {% assign _pt_key  = page.title | downcase %}
+        {% assign _pt_key = page.title | downcase %}
         {% assign _pt_data = site.data.nav_pt[_pt_key] %}
         {% assign _pt_href = _pt_data.href_pt | default: '' %}
       {% endif %}
 
       <div id="lang-switcher-nav" class="lang-switcher-nav">
-        <a id="ls-en"
-           class="ls-btn{% unless is_pt_page %} ls-active{% endunless %}"
-           href="{{ _en_href | relative_url }}"
-           data-save-lang="en"
-           title="English"
-           aria-label="Switch to English">
+        <a
+          id="ls-en"
+          class="ls-btn{% unless is_pt_page %} ls-active{% endunless %}"
+          href="{{ _en_href | relative_url }}"
+          data-save-lang="en"
+          title="English"
+          aria-label="Switch to English"
+        >
           <span class="ls-flag fi fi-gb"></span><span class="ls-label">EN</span>
         </a>
         {% if _pt_href != '' or is_pt_page %}
-          <a id="ls-pt"
-             class="ls-btn{% if is_pt_page %} ls-active{% endif %}"
-             href="{{ _pt_href | relative_url }}"
-             data-save-lang="pt"
-             title="Português (Brasil)"
-             aria-label="Mudar para Português">
+          <a
+            id="ls-pt"
+            class="ls-btn{% if is_pt_page %} ls-active{% endif %}"
+            href="{{ _pt_href | relative_url }}"
+            data-save-lang="pt"
+            title="Português (Brasil)"
+            aria-label="Mudar para Português"
+          >
             <span class="ls-flag fi fi-br"></span><span class="ls-label">PT</span>
           </a>
         {% else %}
@@ -48,7 +51,9 @@
       {% if page.permalink != '/' and page.permalink != '/pt/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
           {% if site.title == 'blank' %}
-            {% if site.first_name %}<span class="font-weight-bold">{{- site.first_name -}}</span>{% endif %}
+            {% if site.first_name -%}
+              <span class="font-weight-bold">{{- site.first_name -}}</span>
+            {%- endif %}
             {% if site.middle_name %}{{- site.middle_name -}}{% endif %}
             {% if site.last_name %}{{- site.last_name -}}{% endif %}
           {% else %}
@@ -77,19 +82,20 @@
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-
           {% comment %} ── About link ── {% endcomment %}
           {% for p in site.pages %}
             {% if p.permalink == '/' %}{% assign about_title_en = p.title %}{% endif %}
           {% endfor %}
-          {% assign _about_pt = site.data.nav_pt['about'] %}
+          {% assign _about_pt = site.data.nav_pt.about %}
           <li class="nav-item {% if page.permalink == '/' or page.permalink == '/pt/' %}active{% endif %}">
-            <a class="nav-link"
-               href="{{ '/' | relative_url }}"
-               data-en-title="{{ about_title_en }}"
-               data-pt-title="{{ _about_pt.title | default: about_title_en }}"
-               data-en-href="{{ '/' | relative_url }}"
-               data-pt-href="{{ _about_pt.href_pt | default: '/' | relative_url }}">
+            <a
+              class="nav-link"
+              href="{{ '/' | relative_url }}"
+              data-en-title="{{ about_title_en }}"
+              data-pt-title="{{ _about_pt.title | default: about_title_en }}"
+              data-en-href="{{ '/' | relative_url }}"
+              data-pt-href="{{ _about_pt.href_pt | default: '/' | relative_url }}"
+            >
               {{- about_title_en }}
               {% if page.permalink == '/' or page.permalink == '/pt/' %}
                 <span class="sr-only">(current)</span>
@@ -101,7 +107,7 @@
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
             {% if p.nav and p.autogen == null %}
-              {% assign _pt_key  = p.title | downcase %}
+              {% assign _pt_key = p.title | downcase %}
               {% assign _pt_data = site.data.nav_pt[_pt_key] %}
               {% assign _pt_title = _pt_data.title | default: p.title %}
               {% assign _pt_page_href = _pt_data.href_pt | default: p.url %}
@@ -112,19 +118,29 @@
                   {% if page.title == child.title %}{% assign has_active_child = true %}{% endif %}
                 {% endfor %}
                 <li class="nav-item dropdown {% if page.title == p.title or has_active_child %}active{% endif %}">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                     role="button" data-toggle="dropdown"
-                     aria-haspopup="true" aria-expanded="false">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
                     {{- p.title }}
-                    {% if page.title == p.title or has_active_child %}<span class="sr-only">(current)</span>{% endif %}
+                    {% if page.title == p.title or has_active_child -%}
+                      <span class="sr-only">(current)</span>
+                    {%- endif %}
                   </a>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     {% for child in p.children %}
                       {% if child.title == 'divider' %}
                         <div class="dropdown-divider"></div>
                       {% else %}
-                        <a class="dropdown-item {% if page.title == child.title %}active{% endif %}"
-                           href="{% if child.permalink contains '://' %}{{ child.permalink }}{% else %}{{ child.permalink | relative_url }}{% endif %}">
+                        <a
+                          class="dropdown-item {% if page.title == child.title %}active{% endif %}"
+                          href="{% if child.permalink contains '://' %}{{ child.permalink }}{% else %}{{ child.permalink | relative_url }}{% endif %}"
+                        >
                           {{- child.title -}}
                         </a>
                       {% endif %}
@@ -141,14 +157,18 @@
                   {% assign _url = p.url %}
                 {% endif %}
                 <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
-                  <a class="nav-link"
-                     href="{{ _url | relative_url }}"
-                     data-en-title="{{ p.title }}"
-                     data-pt-title="{{ _pt_title }}"
-                     data-en-href="{{ _url | relative_url }}"
-                     data-pt-href="{{ _pt_page_href | relative_url }}">
+                  <a
+                    class="nav-link"
+                    href="{{ _url | relative_url }}"
+                    data-en-title="{{ p.title }}"
+                    data-pt-title="{{ _pt_title }}"
+                    data-en-href="{{ _url | relative_url }}"
+                    data-pt-href="{{ _pt_page_href | relative_url }}"
+                  >
                     {{- p.title }}
-                    {% if page.url contains p.url %}<span class="sr-only">(current)</span>{% endif %}
+                    {% if page.url contains p.url -%}
+                      <span class="sr-only">(current)</span>
+                    {%- endif %}
                   </a>
                 </li>
               {% endif %}

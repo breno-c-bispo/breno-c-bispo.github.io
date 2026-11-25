@@ -20,7 +20,9 @@
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.04em;
-    transition: background 0.15s, color 0.15s;
+    transition:
+      background 0.15s,
+      color 0.15s;
     cursor: pointer;
 
     &:hover {

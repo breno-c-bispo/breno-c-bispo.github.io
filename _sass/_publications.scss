@@ -226,7 +226,10 @@
     font-size: 0.8rem;
     line-height: 1.4;
     cursor: pointer;
-    transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+    transition:
+      color 0.15s,
+      border-color 0.15s,
+      background-color 0.15s;
 
     &:hover {
       color: var(--global-theme-color);

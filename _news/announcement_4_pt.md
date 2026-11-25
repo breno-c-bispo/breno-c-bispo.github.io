@@ -6,4 +6,4 @@ related_posts: false
 lang: pt-BR
 ---
 
-Artigo publicado na **Computers in Biology and Medicine**: *"Da detecção de comunidades cerebrais de primeira à alta ordem: Uma abordagem via processamento de sinais em hipergrafo"* — [doi:10.1016/j.compbiomed.2025.111409](https://doi.org/10.1016/j.compbiomed.2025.111409).
+Artigo publicado na **Computers in Biology and Medicine**: _"Da detecção de comunidades cerebrais de primeira à alta ordem: Uma abordagem via processamento de sinais em hipergrafo"_ — [doi:10.1016/j.compbiomed.2025.111409](https://doi.org/10.1016/j.compbiomed.2025.111409).
